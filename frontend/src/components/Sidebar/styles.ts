@@ -1,0 +1,235 @@
+import styled from 'styled-components';
+
+export const SidebarContainer = styled.div`
+  width: 100%;
+  height: 100%;
+`;
+
+export const BirthdayFriendContainer = styled.div`
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1;
+
+  background-color: white;
+  border: 1px solid ${props => props.theme.colors['gray-300']};
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+`;
+
+export const BirthdayFriendHeader = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: ${props => props.theme.fontSize['base']};
+  font-weight: 700;
+
+  h2 {
+    font-size: ${props => props.theme.fontSize['base']};
+    font-weight: 700;
+  }
+
+  span {
+    font-size: ${props => props.theme.fontSize['sm']};
+    color: ${props => props.theme.colors['sky-500']};
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      filter: brightness(1.2);
+    }
+  }
+`;
+
+export const BirthdayFriendContent = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .icon-message {
+    color: ${props => props.theme.colors['sky-500']};
+  }
+`;
+
+export const BirthdayFriendProfile = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  .avatarFriend {
+    max-width: 3.625rem;
+    height: 3.625rem;
+    border: 3px solid ${props => props.theme.colors['green-500']};
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      clip-path: circle();
+    }
+  }
+`;
+
+export const BirthdayFriendName = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+
+  h4 {
+    font-size: ${props => props.theme.fontSize['sm']};
+    color: ${props => props.theme.colors['zinc-800']};
+  }
+`;
+
+export const BirthdayFriendCountry = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .flag {
+    max-width: 1.5rem;
+    width: 100%;
+    height: 100%;
+    clip-path: none;
+  }
+
+  span {
+    font-size: ${props => props.theme.fontSize['sm']};
+    color: ${props => props.theme.colors['zinc-800']};
+  }
+`;
+
+export const FriendRequestContainer = styled.div`
+  width: 100%;
+  height: auto;
+  margin-top: 1.5rem;
+
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1;
+
+  background-color: white;
+  border: 1px solid ${props => props.theme.colors['gray-300']};
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+`;
+
+export const FriendRequestHeader = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: ${props => props.theme.fontSize['base']};
+  font-weight: 700;
+
+  h2 {
+    font-size: ${props => props.theme.fontSize['base']};
+    font-weight: 700;
+  }
+
+  span {
+    font-size: ${props => props.theme.fontSize['sm']};
+    color: ${props => props.theme.colors['sky-500']};
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      filter: brightness(1.2);
+    }
+  }
+`;
+
+export const FriendRequestContent = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const FriendRequestProfile = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  .avatarRequestFriend {
+    max-width: 3.625rem;
+    height: 3.625rem;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      clip-path: circle();
+    }
+  }
+`;
+
+export const FriendRequestName = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+
+  h4 {
+    font-size: ${props => props.theme.fontSize['sm']};
+    color: ${props => props.theme.colors['zinc-800']};
+  }
+`;
+
+export const FriendRequestCountry = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .flag {
+    max-width: 1.5rem;
+    width: 100%;
+    height: 100%;
+    clip-path: none;
+  }
+
+  span {
+    font-size: ${props => props.theme.fontSize['sm']};
+    color: ${props => props.theme.colors['zinc-800']};
+  }
+`;
+
+export const FriendRequestButtons = styled.div`
+  display: flex;
+  gap: 1.5rem;
+
+  .confirmButton {
+    padding: 0.75rem 1rem;
+    border: 0;
+    background-color: ${props => props.theme.colors['sky-500']};
+    color: white;
+    border-radius: 8px;
+    font-size: ${props => props.theme.fontSize['sm']};
+    font-weight: 700;
+    transition: filter 0.3s;
+
+    &:hover {
+      filter: brightness(0.9);
+    }
+  }
+
+  .declineButton {
+    padding: 0.75rem 1rem;
+    border: 0;
+    background-color: ${props => props.theme.colors['gray-300']};
+    color: ${props => props.theme.colors['zinc-800']};
+    border-radius: 8px;
+    font-size: ${props => props.theme.fontSize['sm']};
+    font-weight: 700;
+
+    transition: filter 0.3s;
+
+    &:hover {
+      filter: brightness(0.7);
+    }
+  }
+`;

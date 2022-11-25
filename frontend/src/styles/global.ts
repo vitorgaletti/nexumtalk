@@ -1,0 +1,84 @@
+import { createGlobalStyle } from 'styled-components';
+import { device } from './themes/default';
+
+export const GlobalStyle = createGlobalStyle`
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+  body {
+    width: 100%;
+    height: 100%;
+    background-color: ${props => props.theme.colors['zinc-100']};
+    -webkit-font-smoothing: antialiased;
+    }
+
+    body, input, textarea, button {
+      font-family: 'Inter', sans-serif;
+      font-size: ${props => props.theme.fontSize['base']};
+      font-weight: 400;
+    }
+
+    main {
+      padding: 1rem 2rem;
+
+      @media (min-width: ${device['mobile']}){
+        padding: 1rem;
+      }
+    }
+
+
+    h1, h2, h3, h4, h5, h6, strong {
+      font-weight: 700;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    [disabled] {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      border-radius: 1rem;
+      background-color: ${props => props.theme.colors['zinc-100']};
+    }
+
+    &::-webkit-scrollbar {
+      width: 10px;
+      background-color: ${props => props.theme.colors['zinc-100']};
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 1rem;
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      background-color: ${props => props.theme.colors['gray-300']};
+      -webkit-border-radius: 1em;
+    }
+
+    .DialogOverlay {
+      background-color: ${props => props.theme.colors['overlay']};
+      position: fixed;
+      inset: 0;
+      animation: overlayShow 3s  cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1;
+    }
+
+    @keyframes overlayShow {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+`;
