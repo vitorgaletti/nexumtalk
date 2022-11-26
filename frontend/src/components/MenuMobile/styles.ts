@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const MenuMobileContainer = styled.div`
   max-width: calc(100vw - 30%);
   width: 100%;
-  height: 50vh;
+  height: 60vh;
   padding: 1rem;
   background-color: white;
   position: fixed;
