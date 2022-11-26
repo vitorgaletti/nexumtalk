@@ -25,7 +25,6 @@ export const ContainerHeader = styled.header`
 `;
 
 export const LogoContent = styled.div`
-  width: 100%;
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -36,8 +35,7 @@ export const LogoContent = styled.div`
     height: auto;
 
     @media (min-width: ${device['mobile']}) {
-      max-width: 2rem;
-      margin: 0 auto;
+      display: none;
     }
   }
 
@@ -93,9 +91,7 @@ export const AvatarContent = styled.div`
   .DropdownMenuAvatar {
     display: flex;
     flex: 1;
-    svg {
-      display: none;
-    }
+    align-items: center;
   }
 `;
 
@@ -113,7 +109,7 @@ export const DropdownMenuContent = styled(DropdownMenu.Content)`
   z-index: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1.5rem;
 
   .DropdownMenuArrow {
     fill: white;

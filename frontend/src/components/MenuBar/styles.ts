@@ -47,10 +47,14 @@ export const MenuContainer = styled.nav`
         font-size: ${props => props.theme.fontSize['sm']};
       }
     }
+
+    @media (min-width: ${device['mobile']}) {
+      gap: 2rem;
+    }
   }
 
   @media (min-width: ${device['mobile']}) {
     padding: 0;
-    margin-top: 1.5rem;
+    margin-top: 3rem;
   }
 `;

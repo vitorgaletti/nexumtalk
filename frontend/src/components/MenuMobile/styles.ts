@@ -3,10 +3,10 @@ import styled from 'styled-components';
 export const MenuMobileContainer = styled.div`
   max-width: calc(100vw / 2);
   width: 100%;
-  height: auto;
+  height: 50vh;
   padding: 1rem;
   background-color: white;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 2;
@@ -42,7 +42,7 @@ export const MenuMobileLogo = styled.div`
   }
 
   h1 {
-    font-size: ${props => props.theme.fontSize['base']};
+    font-size: ${props => props.theme.fontSize['xl']};
     color: ${props => props.theme.colors['sky-500']};
   }
 `;
