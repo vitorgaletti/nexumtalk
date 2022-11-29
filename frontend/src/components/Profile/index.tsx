@@ -36,7 +36,10 @@ export function Profile() {
           <p>vitor97, 25 y.o. </p>
           <LocationProfile>
             <span>Rio de Janeiro, Brazil</span>
-            <img src="https://countryflagsapi.com/svg/brazil" alt="Brazil" />
+            <img
+              src="https://www.countryflagicons.com/FLAT/24/BR.png"
+              alt="Brazil"
+            />
           </LocationProfile>
 
           <strong>

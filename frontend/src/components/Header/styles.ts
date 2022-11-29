@@ -5,7 +5,7 @@ import { device } from '../../styles/themes/default';
 export const ContainerHeader = styled.header`
   width: 100%;
   background-color: ${props => props.theme.colors['sky-500']};
-  padding: 1rem 2rem;
+  padding: 0.75rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,15 +19,21 @@ export const ContainerHeader = styled.header`
     background-color: transparent;
   }
 
-  @media (min-width: ${device['mobile']}) {
-    padding: 0.75rem 1rem;
+  @media (min-width: ${device['tablet']}) {
+    padding: 1rem 2rem;
   }
 `;
 
 export const LogoContent = styled.div`
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0;
+
+  button {
+    @media (min-width: ${device['tablet']}) {
+      display: none;
+    }
+  }
 
   img {
     max-width: 3rem;
@@ -36,6 +42,11 @@ export const LogoContent = styled.div`
 
     @media (min-width: ${device['mobile']}) {
       display: none;
+    }
+
+    @media (min-width: ${device['tablet']}) {
+      max-width: 2.625rem;
+      display: block;
     }
   }
 
@@ -46,16 +57,25 @@ export const LogoContent = styled.div`
     @media (min-width: ${device['mobile']}) {
       display: none;
     }
+
+    @media (min-width: ${device['tablet']}) {
+      font-size: ${props => props.theme.fontSize['xl']};
+      display: block;
+    }
   }
 
   .menu-hamburguer {
     @media (min-width: ${device['mobile']}) {
       display: block;
     }
+
+    @media (min-width: ${device['tablet']}) {
+      display: none;
+    }
   }
 
-  @media (min-width: ${device['mobile']}) {
-    gap: 0;
+  @media (min-width: ${device['tablet']}) {
+    gap: 0.75rem;
   }
 `;
 
@@ -63,6 +83,7 @@ export const AvatarContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.75rem;
 
   h4 {
     font-size: ${props => props.theme.fontSize['xl']};
@@ -70,6 +91,11 @@ export const AvatarContent = styled.div`
 
     @media (min-width: ${device['mobile']}) {
       display: none;
+    }
+
+    @media (min-width: ${device['tablet']}) {
+      display: block;
+      font-size: ${props => props.theme.fontSize['base']};
     }
   }
 
@@ -85,6 +111,10 @@ export const AvatarContent = styled.div`
 
     @media (min-width: ${device['mobile']}) {
       display: none;
+    }
+
+    @media (min-width: ${device['tablet']}) {
+      display: block;
     }
   }
 

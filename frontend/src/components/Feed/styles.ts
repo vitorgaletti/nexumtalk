@@ -28,12 +28,12 @@ export const NewPost = styled.div`
   }
 
   strong {
-    font-size: ${props => props.theme.fontSize['base']};
+    font-size: ${props => props.theme.fontSize['sm']};
     font-weight: 700;
     color: ${props => props.theme.colors['zinc-600']};
 
-    @media (min-width: ${device['mobile']}) {
-      font-size: ${props => props.theme.fontSize['sm']};
+    @media (min-width: ${device['tablet']}) {
+      font-size: ${props => props.theme.fontSize['base']};
     }
   }
 

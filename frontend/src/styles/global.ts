@@ -24,10 +24,10 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     main {
-      padding: 1rem 2rem;
+      padding: 1rem;
 
-      @media (min-width: ${device['mobile']}){
-        padding: 1rem;
+      @media (min-width: ${device['tablet']}){
+        padding: 1rem 2rem;
       }
     }
 

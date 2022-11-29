@@ -9,10 +9,14 @@ export const ProfileContainer = styled.div`
   border-radius: 4px;
   background-color: white;
   position: sticky;
-  top: -45%;
+  top: calc(0vh - 440px);
 
   @media (min-width: ${device['mobile']}) {
     display: none;
+  }
+
+  @media (min-width: ${device['tablet']}) {
+    display: block;
   }
 `;
 
@@ -36,6 +40,10 @@ export const BannerProfile = styled.div`
     background-position: center;
     background-size: cover;
   }
+
+  @media (min-width: ${device['tablet']}) {
+    max-width: 250px;
+  }
 `;
 
 export const PhotoProfile = styled.div`
@@ -49,14 +57,18 @@ export const PhotoProfile = styled.div`
     height: 100%;
     border-radius: 4px;
   }
+
+  @media (min-width: ${device['tablet']}) {
+    top: 11%;
+  }
 `;
 
 export const ProfileContent = styled.div`
-  margin-top: 62px;
+  margin-top: 4.625rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1.5rem;
   font-size: ${props => props.theme.fontSize['sm']};
   color: ${props => props.theme.colors['zinc-600']};
 
@@ -66,7 +78,7 @@ export const ProfileContent = styled.div`
     background-color: white;
     border-radius: 8px;
     color: ${props => props.theme.colors['sky-500']};
-    font-size: 1rem;
+    font-size: ${props => props.theme.fontSize['sm']};
     font-weight: 700;
     display: flex;
     align-items: center;
@@ -81,8 +93,7 @@ export const ProfileContent = styled.div`
   }
 
   hr {
-    margin-top: 24px;
-    max-width: 281px;
+    max-width: 220px;
     width: 100%;
     border: 1px solid ${props => props.theme.colors['gray-300']};
   }
@@ -97,8 +108,14 @@ export const InformationProfile = styled.div`
   align-items: center;
   gap: 0.75rem;
 
+  p {
+    color: ${props => props.theme.colors['zinc-600']};
+    color: ${props => props.theme.fontSize['sm']};
+  }
+
   strong {
     color: ${props => props.theme.colors['zinc-600']};
+    font-size: ${props => props.theme.fontSize['xs']};
     text-align: center;
     font-weight: 700;
 
@@ -125,7 +142,7 @@ export const StatusProfile = styled.div`
   }
 
   h4 {
-    font-size: ${props => props.theme.fontSize['lg']};
+    font-size: ${props => props.theme.fontSize['base']};
     font-weight: 600;
     color: ${props => props.theme.colors['zinc-800']};
   }
@@ -134,6 +151,7 @@ export const StatusProfile = styled.div`
 export const LocationProfile = styled.div`
   display: flex;
   gap: 8px;
+  align-items: center;
 
   span {
     font-size: ${props => props.theme.fontSize['sm']};

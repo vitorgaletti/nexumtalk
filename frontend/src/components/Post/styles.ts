@@ -10,16 +10,15 @@ export const PostContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 1.5rem 0 1.5rem;
+  padding: 1rem 0 1.5rem;
 
   p {
-    padding: 0 1.5rem;
-    font-size: ${props => props.theme.fontSize['base']};
+    padding: 0 1rem 0;
+    font-size: ${props => props.theme.fontSize['xs']};
     color: ${props => props.theme.colors['zinc-800']};
 
-    @media (min-width: ${device['mobile']}) {
-      padding: 0 1rem 0;
-      font-size: ${props => props.theme.fontSize['xs']};
+    @media (min-width: ${device['tablet']}) {
+      font-size: ${props => props.theme.fontSize['sm']};
     }
   }
 
@@ -32,13 +31,9 @@ export const PostContainer = styled.div`
     background-size: cover;
     background-position: center;
   }
-
-  @media (min-width: ${device['mobile']}) {
-    padding: 1rem 0 1.5rem;
-  }
 `;
 
-export const PostHeader = styled.header`
+export const PostHeader = styled.div`
   padding: 0rem 1.5rem;
   display: flex;
   gap: 8px;
@@ -56,12 +51,12 @@ export const PostHeader = styled.header`
     gap: 4px;
 
     h4 {
-      font-size: ${props => props.theme.fontSize['base']};
+      font-size: ${props => props.theme.fontSize['sm']};
       font-weight: 600;
       color: ${props => props.theme.colors['zinc-800']};
 
-      @media (min-width: ${device['mobile']}) {
-        font-size: ${props => props.theme.fontSize['sm']};
+      @media (min-width: ${device['tablet']}) {
+        font-size: ${props => props.theme.fontSize['base']};
       }
     }
 
@@ -80,7 +75,7 @@ export const PostHeader = styled.header`
   }
 `;
 
-export const PostFooter = styled.footer`
+export const PostFooter = styled.div`
   padding: 0.5rem 1.5rem 0;
   display: flex;
   justify-content: space-between;
@@ -92,6 +87,10 @@ export const PostFooter = styled.footer`
   @media (min-width: ${device['mobile']}) {
     padding: 0.5rem 1rem 0;
     font-size: ${props => props.theme.fontSize['xs']};
+  }
+
+  @media (min-width: ${device['tablet']}) {
+    font-size: ${props => props.theme.fontSize['sm']};
   }
 `;
 
