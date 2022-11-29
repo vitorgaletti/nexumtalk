@@ -6,6 +6,11 @@ export const MenuContainer = styled.nav`
   padding: 0;
   margin-top: 3rem;
 
+  @media (min-width: ${device['tablet']}) {
+    padding: 1.5rem 0 2rem 2rem;
+    margin: 0;
+  }
+
   ul {
     display: flex;
     flex-direction: column;
@@ -22,6 +27,10 @@ export const MenuContainer = styled.nav`
       font-weight: 700;
       color: ${props => props.theme.colors['zinc-800']};
       transition: color 0.2s;
+
+      @media (min-width: ${device['tablet']}) {
+        font-size: ${props => props.theme.fontSize['base']};
+      }
 
       &:hover {
         color: ${props => props.theme.colors['sky-500']};
@@ -43,15 +52,6 @@ export const MenuContainer = styled.nav`
           font-size: ${props => props.theme.fontSize['2xl']};
         }
       }
-
-      @media (min-width: ${device['tablet']}) {
-        font-size: ${props => props.theme.fontSize['base']};
-      }
     }
-  }
-
-  @media (min-width: ${device['tablet']}) {
-    padding: 1.5rem 0 2rem 1rem;
-    margin: 0;
   }
 `;

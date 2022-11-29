@@ -38,7 +38,7 @@ export function FriendList() {
               <h4>Vitor, 21</h4>
               <FriendListCountry>
                 <img
-                  src="https://countryflagsapi.com/svg/brazil"
+                  src="https://www.countryflagicons.com/FLAT/24/BR.png"
                   alt="Brazil"
                   className="flag"
                 />
@@ -58,7 +58,7 @@ export function FriendList() {
               <h4>Vitor, 21</h4>
               <FriendListCountry>
                 <img
-                  src="https://countryflagsapi.com/svg/brazil"
+                  src="https://www.countryflagicons.com/FLAT/24/BR.png"
                   alt="Brazil"
                   className="flag"
                 />
@@ -78,7 +78,7 @@ export function FriendList() {
               <h4>Vitor, 21</h4>
               <FriendListCountry>
                 <img
-                  src="https://countryflagsapi.com/svg/brazil"
+                  src="https://www.countryflagicons.com/FLAT/24/BR.png"
                   alt="Brazil"
                   className="flag"
                 />
@@ -98,7 +98,7 @@ export function FriendList() {
               <h4>Vitor, 21</h4>
               <FriendListCountry>
                 <img
-                  src="https://countryflagsapi.com/svg/brazil"
+                  src="https://www.countryflagicons.com/FLAT/24/BR.png"
                   alt="Brazil"
                   className="flag"
                 />
@@ -118,7 +118,7 @@ export function FriendList() {
               <h4>Vitor, 21</h4>
               <FriendListCountry>
                 <img
-                  src="https://countryflagsapi.com/svg/brazil"
+                  src="https://www.countryflagicons.com/FLAT/24/BR.png"
                   alt="Brazil"
                   className="flag"
                 />
@@ -138,7 +138,7 @@ export function FriendList() {
               <h4>Vitor, 21</h4>
               <FriendListCountry>
                 <img
-                  src="https://countryflagsapi.com/svg/brazil"
+                  src="https://www.countryflagicons.com/FLAT/24/BR.png"
                   alt="Brazil"
                   className="flag"
                 />
@@ -158,7 +158,7 @@ export function FriendList() {
               <h4>Vitor, 21</h4>
               <FriendListCountry>
                 <img
-                  src="https://countryflagsapi.com/svg/brazil"
+                  src="https://www.countryflagicons.com/FLAT/24/BR.png"
                   alt="Brazil"
                   className="flag"
                 />
@@ -178,7 +178,7 @@ export function FriendList() {
               <h4>Vitor, 21</h4>
               <FriendListCountry>
                 <img
-                  src="https://countryflagsapi.com/svg/brazil"
+                  src="https://www.countryflagicons.com/FLAT/24/BR.png"
                   alt="Brazil"
                   className="flag"
                 />

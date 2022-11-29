@@ -27,7 +27,7 @@ export function FriendRequest() {
             <h4>Vitor</h4>
             <FriendRequestCountry>
               <img
-                src="https://countryflagsapi.com/svg/brazil"
+                src="https://www.countryflagicons.com/FLAT/24/BR.png"
                 alt="Brazil"
                 className="flag"
               />
@@ -51,7 +51,7 @@ export function FriendRequest() {
             <h4>Vitor</h4>
             <FriendRequestCountry>
               <img
-                src="https://countryflagsapi.com/svg/brazil"
+                src="https://www.countryflagicons.com/FLAT/24/BR.png"
                 alt="Brazil"
                 className="flag"
               />
@@ -75,7 +75,7 @@ export function FriendRequest() {
             <h4>Vitor</h4>
             <FriendRequestCountry>
               <img
-                src="https://countryflagsapi.com/svg/brazil"
+                src="https://www.countryflagicons.com/FLAT/24/BR.png"
                 alt="Brazil"
                 className="flag"
               />

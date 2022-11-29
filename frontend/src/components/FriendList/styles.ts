@@ -7,7 +7,6 @@ export const FriendListContainer = styled.div`
   margin-top: 1.5rem;
 
   padding: 2rem;
-  display: flex;
   flex-direction: column;
   gap: 1.5rem;
   flex: 1;
@@ -17,12 +16,20 @@ export const FriendListContainer = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
   position: sticky;
-  top: 10%;
+  top: 100px;
+
+  @media (min-width: ${device['mobile']}) {
+    display: none;
+  }
+
+  @media (min-width: ${device['desktop']}) {
+    display: flex;
+  }
 
   .friendListWrapper {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
     height: 100%;
     overflow: auto;
     background-color: white;
@@ -45,10 +52,6 @@ export const FriendListContainer = styled.div`
       background-color: ${props => props.theme.colors['gray-300']};
       -webkit-border-radius: 1em;
     }
-  }
-
-  @media (min-width: ${device['mobile']}) {
-    display: none;
   }
 `;
 
@@ -90,6 +93,8 @@ export const FriendListSearch = styled.div`
   }
 
   button {
+    display: flex;
+    align-items: center;
     border: 0;
     outline: none;
     background-color: transparent;
@@ -104,7 +109,7 @@ export const FriendListSearch = styled.div`
     font-weight: 600;
 
     &::placeholder {
-      font-size: ${props => props.theme.fontSize['xs']};
+      font-size: ${props => props.theme.fontSize['sm']};
       color: ${props => props.theme.colors['zinc-800']};
       font-weight: 400;
     }

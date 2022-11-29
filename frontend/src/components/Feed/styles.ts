@@ -11,7 +11,7 @@ export const FeedContainer = styled.div`
 
 export const NewPost = styled.div`
   width: 100%;
-  padding: 1rem 2.5rem;
+  padding: 0.75rem 2rem;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -19,6 +19,10 @@ export const NewPost = styled.div`
   border-radius: 48px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: white;
+
+  @media (min-width: ${device['desktop']}) {
+    padding: 1rem 2.5rem;
+  }
 
   img {
     max-width: 3rem;
@@ -35,9 +39,5 @@ export const NewPost = styled.div`
     @media (min-width: ${device['tablet']}) {
       font-size: ${props => props.theme.fontSize['base']};
     }
-  }
-
-  @media (min-width: ${device['mobile']}) {
-    padding: 0.75rem 2rem;
   }
 `;

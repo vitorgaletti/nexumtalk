@@ -12,6 +12,10 @@ export const PostContainer = styled.div`
   gap: 1rem;
   padding: 1rem 0 1.5rem;
 
+  @media (min-width: ${device['desktop']}) {
+    padding: 1.5rem 0 1.5rem;
+  }
+
   p {
     padding: 0 1rem 0;
     font-size: ${props => props.theme.fontSize['xs']};
@@ -19,6 +23,11 @@ export const PostContainer = styled.div`
 
     @media (min-width: ${device['tablet']}) {
       font-size: ${props => props.theme.fontSize['sm']};
+    }
+
+    @media (min-width: ${device['desktop']}) {
+      padding: 0 1.5rem 0;
+      font-size: ${props => props.theme.fontSize['base']};
     }
   }
 
@@ -34,9 +43,13 @@ export const PostContainer = styled.div`
 `;
 
 export const PostHeader = styled.div`
-  padding: 0rem 1.5rem;
+  padding: 0 1rem;
   display: flex;
   gap: 8px;
+
+  @media (min-width: ${device['desktop']}) {
+    padding: 0rem 1.5rem;
+  }
 
   img {
     max-width: 3rem;
@@ -69,14 +82,10 @@ export const PostHeader = styled.div`
       }
     }
   }
-
-  @media (min-width: ${device['mobile']}) {
-    padding: 0 1rem;
-  }
 `;
 
 export const PostFooter = styled.div`
-  padding: 0.5rem 1.5rem 0;
+  padding: 0.5rem 1rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -85,12 +94,16 @@ export const PostFooter = styled.div`
   color: ${props => props.theme.colors['zinc-800']};
 
   @media (min-width: ${device['mobile']}) {
-    padding: 0.5rem 1rem 0;
     font-size: ${props => props.theme.fontSize['xs']};
   }
 
   @media (min-width: ${device['tablet']}) {
     font-size: ${props => props.theme.fontSize['sm']};
+  }
+
+  @media (min-width: ${device['desktop']}) {
+    padding: 0.5rem 1.5rem 0;
+    font-size: ${props => props.theme.fontSize['base']};
   }
 `;
 
@@ -106,12 +119,17 @@ export const PostLikes = styled.div`
 
     &:hover {
       filter: brightness(0.7);
+      transform: scale(1.2);
     }
 
     @media (min-width: ${device['mobile']}) {
       max-width: 1.25rem;
       width: 100%;
       height: auto;
+    }
+
+    @media (min-width: ${device['desktop']}) {
+      max-width: 1.5rem;
     }
   }
 `;

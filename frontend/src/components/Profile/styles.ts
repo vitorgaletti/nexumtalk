@@ -18,6 +18,14 @@ export const ProfileContainer = styled.div`
   @media (min-width: ${device['tablet']}) {
     display: block;
   }
+
+  @media (min-width: ${device['desktop']}) {
+    top: calc(0vh - 475px);
+  }
+
+  @media (min-width: ${device['desktopLarge']}) {
+    top: calc(0vh - 440px);
+  }
 `;
 
 export const HeaderProfile = styled.div`
@@ -28,10 +36,14 @@ export const HeaderProfile = styled.div`
 `;
 
 export const BannerProfile = styled.div`
-  max-width: 313px;
+  max-width: 250px;
   width: 100%;
   height: 150px;
   position: relative;
+
+  @media (min-width: ${device['desktop']}) {
+    max-width: 313px;
+  }
 
   img {
     width: 100%;
@@ -40,26 +52,18 @@ export const BannerProfile = styled.div`
     background-position: center;
     background-size: cover;
   }
-
-  @media (min-width: ${device['tablet']}) {
-    max-width: 250px;
-  }
 `;
 
 export const PhotoProfile = styled.div`
   max-width: 150px;
   height: 100px;
   position: absolute;
-  top: 12%;
+  top: 11%;
 
   img {
     width: 100%;
     height: 100%;
     border-radius: 4px;
-  }
-
-  @media (min-width: ${device['tablet']}) {
-    top: 11%;
   }
 `;
 
@@ -90,12 +94,20 @@ export const ProfileContent = styled.div`
       color: white;
       background-color: ${props => props.theme.colors['sky-500']};
     }
+
+    @media (min-width: ${device['desktop']}) {
+      font-size: ${props => props.theme.fontSize['base']};
+    }
   }
 
   hr {
     max-width: 220px;
     width: 100%;
     border: 1px solid ${props => props.theme.colors['gray-300']};
+
+    @media (min-width: ${device['desktop']}) {
+      max-width: 281px;
+    }
   }
 `;
 
@@ -126,6 +138,10 @@ export const InformationProfile = styled.div`
     &::after {
       content: '."';
     }
+
+    @media (min-width: ${device['desktop']}) {
+      font-size: ${props => props.theme.fontSize['sm']};
+    }
   }
 `;
 
@@ -149,9 +165,11 @@ export const StatusProfile = styled.div`
 `;
 
 export const LocationProfile = styled.div`
+  width: fit-content;
   display: flex;
   gap: 8px;
   align-items: center;
+  text-align: center;
 
   span {
     font-size: ${props => props.theme.fontSize['sm']};

@@ -13,14 +13,14 @@ export const ContainerHeader = styled.header`
   top: 0;
   z-index: 1;
 
+  @media (min-width: ${device['tablet']}) {
+    padding: 1rem 2rem;
+  }
+
   button {
     border: 0;
     outline: none;
     background-color: transparent;
-  }
-
-  @media (min-width: ${device['tablet']}) {
-    padding: 1rem 2rem;
   }
 `;
 
@@ -29,6 +29,10 @@ export const LogoContent = styled.div`
   align-items: center;
   gap: 0;
 
+  @media (min-width: ${device['tablet']}) {
+    gap: 0.75rem;
+  }
+
   button {
     @media (min-width: ${device['tablet']}) {
       display: none;
@@ -36,7 +40,6 @@ export const LogoContent = styled.div`
   }
 
   img {
-    max-width: 3rem;
     width: 100%;
     height: auto;
 
@@ -48,10 +51,13 @@ export const LogoContent = styled.div`
       max-width: 2.625rem;
       display: block;
     }
+
+    @media (min-width: ${device['desktop']}) {
+      max-width: 3rem;
+    }
   }
 
   h1 {
-    font-size: ${props => props.theme.fontSize['2xl']};
     color: white;
 
     @media (min-width: ${device['mobile']}) {
@@ -61,6 +67,10 @@ export const LogoContent = styled.div`
     @media (min-width: ${device['tablet']}) {
       font-size: ${props => props.theme.fontSize['xl']};
       display: block;
+    }
+
+    @media (min-width: ${device['desktop']}) {
+      font-size: ${props => props.theme.fontSize['2xl']};
     }
   }
 
@@ -73,10 +83,6 @@ export const LogoContent = styled.div`
       display: none;
     }
   }
-
-  @media (min-width: ${device['tablet']}) {
-    gap: 0.75rem;
-  }
 `;
 
 export const AvatarContent = styled.div`
@@ -86,7 +92,6 @@ export const AvatarContent = styled.div`
   gap: 0.75rem;
 
   h4 {
-    font-size: ${props => props.theme.fontSize['xl']};
     color: white;
 
     @media (min-width: ${device['mobile']}) {
@@ -96,6 +101,10 @@ export const AvatarContent = styled.div`
     @media (min-width: ${device['tablet']}) {
       display: block;
       font-size: ${props => props.theme.fontSize['base']};
+    }
+
+    @media (min-width: ${device['desktop']}) {
+      font-size: ${props => props.theme.fontSize['lg']};
     }
   }
 
@@ -169,6 +178,10 @@ export const DropdownMenuContent = styled(DropdownMenu.Content)`
 
       &:hover {
         color: ${props => props.theme.colors['sky-500']};
+      }
+
+      @media (min-width: ${device['desktop']}) {
+        font-size: ${props => props.theme.fontSize['base']};
       }
     }
 

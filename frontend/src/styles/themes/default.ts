@@ -33,5 +33,6 @@ export const defaultTheme = {
 export const device = {
   mobile: '320px',
   tablet: '768px',
-  desktop: '1024px'
+  desktop: '1024px',
+  desktopLarge: '1440px'
 } as const;

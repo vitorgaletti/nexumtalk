@@ -7,7 +7,6 @@ export const FriendRequestContainer = styled.div`
   margin-top: 1.5rem;
 
   padding: 2rem;
-  display: flex;
   flex-direction: column;
   gap: 1.5rem;
   flex: 1;
@@ -18,6 +17,10 @@ export const FriendRequestContainer = styled.div`
 
   @media (min-width: ${device['mobile']}) {
     display: none;
+  }
+
+  @media (min-width: ${device['desktop']}) {
+    display: flex;
   }
 `;
 

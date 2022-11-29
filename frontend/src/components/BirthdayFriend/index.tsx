@@ -28,7 +28,7 @@ export function BirthdayFriend() {
             <h4>Vitor, 21</h4>
             <BirthdayFriendCountry>
               <img
-                src="https://countryflagsapi.com/svg/brazil"
+                src="https://www.countryflagicons.com/FLAT/24/BR.png"
                 alt="Brazil"
                 className="flag"
               />
@@ -48,7 +48,7 @@ export function BirthdayFriend() {
             <h4>Vitor, 22</h4>
             <BirthdayFriendCountry>
               <img
-                src="https://countryflagsapi.com/svg/brazil"
+                src="https://www.countryflagicons.com/FLAT/24/BR.png"
                 alt="Brazil"
                 className="flag"
               />
@@ -68,7 +68,7 @@ export function BirthdayFriend() {
             <h4>Vitor, 23</h4>
             <BirthdayFriendCountry>
               <img
-                src="https://countryflagsapi.com/svg/brazil"
+                src="https://www.countryflagicons.com/FLAT/24/BR.png"
                 alt="Brazil"
                 className="flag"
               />
