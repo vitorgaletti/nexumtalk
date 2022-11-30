@@ -20,7 +20,7 @@ export const ProfileContainer = styled.div`
   }
 
   @media (min-width: ${device['desktop']}) {
-    top: calc(0vh - 475px);
+    top: calc(0vh - 480px);
   }
 
   @media (min-width: ${device['desktopLarge']}) {

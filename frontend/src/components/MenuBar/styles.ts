@@ -18,7 +18,6 @@ export const MenuContainer = styled.nav`
     list-style: none;
 
     a {
-      width: max-content;
       text-decoration: none;
       display: flex;
       align-items: center;

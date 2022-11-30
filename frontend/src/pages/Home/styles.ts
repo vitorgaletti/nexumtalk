@@ -17,7 +17,7 @@ export const HomeContainer = styled.div`
   }
 
   @media (min-width: ${device['desktop']}) {
-    grid-template-columns: minmax(max-content, 313px) minmax(400px, 736px) minmax(
+    grid-template-columns: minmax(237px, 313px) minmax(400px, 736px) minmax(
         auto,
         297px
       );
