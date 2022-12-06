@@ -50,6 +50,15 @@ export const MenuContainer = styled.nav`
         outline-color: ${props => props.theme.colors['sky-500']};
       }
 
+      &.active {
+        color: ${props => props.theme.colors['sky-500']};
+        svg {
+          @media (min-width: ${device['tablet']}) {
+            color: ${props => props.theme.colors['white']};
+          }
+        }
+      }
+
       .icon path {
         stroke: ${props => props.theme.colors['sky-500']};
 

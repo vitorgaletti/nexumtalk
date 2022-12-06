@@ -9,15 +9,15 @@ export function Feed() {
         <img src={avatarImg} alt="Avatar" />
         <strong>What’s New ? </strong>
       </NewPost>
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
+      <Post image text />
+      <Post text />
+      <Post image />
+      <Post image text />
+      <Post text />
+      <Post image />
+      <Post image text />
+      <Post text />
+      <Post image />
     </FeedContainer>
   );
 }

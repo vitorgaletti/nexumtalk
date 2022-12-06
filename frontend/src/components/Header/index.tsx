@@ -8,6 +8,7 @@ import logoImg from '/logo.svg';
 
 import { BsPersonSquare } from 'react-icons/bs';
 import { HiOutlineMenu } from 'react-icons/hi';
+import { NavLink } from 'react-router-dom';
 import { MenuBar } from '../MenuBar';
 import { MenuMobile } from '../MenuMobile';
 import {
@@ -39,11 +40,13 @@ export function Header() {
           </Dialog.Portal>
         </Dialog.Root>
 
-        <img src={logoImg} alt="NexumTalk" />
-        <h1>NexumTalk</h1>
+        <NavLink to="/" className="navlink__logo">
+          <img src={logoImg} alt="NexumTalk" />
+          <h1>NexumTalk</h1>
+        </NavLink>
       </LogoContent>
 
-      <div className="menuDesktop">
+      <div className="menu-desktop">
         <MenuBar />
       </div>
       <AvatarContent>

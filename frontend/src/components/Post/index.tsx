@@ -8,10 +8,17 @@ import {
   PostContainer,
   PostFooter,
   PostHeader,
-  PostLikes
+  PostImage,
+  PostLikes,
+  PostTitle
 } from './styles';
 
-export function Post() {
+interface PostProps {
+  text?: boolean;
+  image?: boolean;
+}
+
+export function Post({ text, image }: PostProps) {
   return (
     <PostContainer>
       <PostHeader>
@@ -22,13 +29,13 @@ export function Post() {
         </div>
       </PostHeader>
 
-      <p>
+      <PostTitle text={text}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porttitor,
         purus in pulvinar rhoncus, ipsum odio ultrices justo, sit amet commodo
         sem lectus in nisl. Praesent commodo justo risus, a euismod erat tempor
         quis.
-      </p>
-      <img src={bannerImg} alt="Photo Post" />
+      </PostTitle>
+      <PostImage src={bannerImg} alt="Photo Post" image={image} />
 
       <PostFooter>
         <PostLikes>

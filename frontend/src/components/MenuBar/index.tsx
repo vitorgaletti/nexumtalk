@@ -3,7 +3,7 @@ import { FaUserFriends } from 'react-icons/fa';
 import { GrView } from 'react-icons/gr';
 import { MdHome, MdPhotoSizeSelectActual, MdSearch } from 'react-icons/md';
 import { RiMessage2Line } from 'react-icons/ri';
-
+import { NavLink } from 'react-router-dom';
 import { MenuContainer } from './styles';
 
 export function MenuBar() {
@@ -11,52 +11,52 @@ export function MenuBar() {
     <MenuContainer>
       <ul>
         <li>
-          <a href="#">
+          <NavLink to="/" title="Home">
             <MdHome />
             <span>Home</span>
-          </a>
+          </NavLink>
         </li>
 
         <li>
-          <a href="#">
+          <NavLink to="/myprofile" title="My Profile">
             <BsPersonSquare />
             <span>My Profile</span>
-          </a>
+          </NavLink>
         </li>
 
         <li>
-          <a href="#">
+          <NavLink to="/myprofile/photos">
             <MdPhotoSizeSelectActual />
             <span>Photos</span>
-          </a>
+          </NavLink>
         </li>
 
         <li>
-          <a href="#">
+          <NavLink to="/myprofile/photos">
             <RiMessage2Line />
             <span>Messages</span>
-          </a>
+          </NavLink>
         </li>
 
         <li>
-          <a href="#">
+          <NavLink to="/myprofile/messages">
             <FaUserFriends />
             <span>Friends</span>
-          </a>
+          </NavLink>
         </li>
 
         <li>
-          <a href="#">
+          <NavLink to="/search">
             <MdSearch />
             <span>Search</span>
-          </a>
+          </NavLink>
         </li>
 
         <li>
-          <a href="#">
+          <NavLink to="/myprofile/lastvisitors">
             <GrView className="icon" />
             <span>Last Visitors</span>
-          </a>
+          </NavLink>
         </li>
       </ul>
     </MenuContainer>

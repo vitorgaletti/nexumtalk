@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 import { device } from '../../styles/themes/default';
 
+interface PostProps {
+  text?: boolean;
+  image?: boolean;
+}
+
 export const PostContainer = styled.div`
   width: 100%;
   background-color: white;
@@ -15,31 +20,33 @@ export const PostContainer = styled.div`
   @media (min-width: ${device['desktop']}) {
     padding: 1.5rem 0 1.5rem;
   }
+`;
 
-  p {
-    padding: 0 1rem 0;
-    font-size: ${props => props.theme.fontSize['xs']};
-    color: ${props => props.theme.colors['zinc-800']};
+export const PostTitle = styled.p<PostProps>`
+  display: ${props => (props.text ? 'block' : 'none')};
+  padding: 0 1rem 0;
+  font-size: ${props => props.theme.fontSize['xs']};
+  color: ${props => props.theme.colors['zinc-800']};
 
-    @media (min-width: ${device['tablet']}) {
-      font-size: ${props => props.theme.fontSize['sm']};
-    }
-
-    @media (min-width: ${device['desktop']}) {
-      padding: 0 1.5rem 0;
-      font-size: ${props => props.theme.fontSize['base']};
-    }
+  @media (min-width: ${device['tablet']}) {
+    font-size: ${props => props.theme.fontSize['sm']};
   }
 
-  img {
-    max-width: 736px;
-    max-height: 400px;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  @media (min-width: ${device['desktop']}) {
+    padding: 0 1.5rem 0;
+    font-size: ${props => props.theme.fontSize['base']};
   }
+`;
+
+export const PostImage = styled.img<PostProps>`
+  display: ${props => (props.image ? 'block' : 'none')};
+  max-width: 736px;
+  max-height: 400px;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 `;
 
 export const PostHeader = styled.div`

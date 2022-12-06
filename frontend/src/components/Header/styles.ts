@@ -27,7 +27,7 @@ export const ContainerHeader = styled.header`
     background-color: transparent;
   }
 
-  .menuDesktop {
+  .menu-desktop {
     display: none;
 
     @media (min-width: ${device['tablet']}) {
@@ -37,52 +37,53 @@ export const ContainerHeader = styled.header`
 `;
 
 export const LogoContent = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0;
-
-  @media (min-width: ${device['tablet']}) {
-    gap: 0.75rem;
-  }
-
   button {
     @media (min-width: ${device['tablet']}) {
       display: none;
     }
   }
 
-  img {
-    width: 100%;
-    height: auto;
+  .navlink__logo {
+    width: min-content;
+    width: -moz-fit-content;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
 
-    @media (min-width: ${device['mobile']}) {
-      display: none;
+    img {
+      width: 100%;
+      height: auto;
+
+      @media (min-width: ${device['mobile']}) {
+        display: none;
+      }
+
+      @media (min-width: ${device['tablet']}) {
+        max-width: 2.625rem;
+        display: block;
+      }
+
+      @media (min-width: ${device['desktop']}) {
+        max-width: 3rem;
+      }
     }
 
-    @media (min-width: ${device['tablet']}) {
-      max-width: 2.625rem;
-      display: block;
-    }
+    h1 {
+      color: white;
 
-    @media (min-width: ${device['desktop']}) {
-      max-width: 3rem;
-    }
-  }
+      @media (min-width: ${device['mobile']}) {
+        display: none;
+      }
 
-  h1 {
-    color: white;
+      @media (min-width: ${device['tablet']}) {
+        font-size: ${props => props.theme.fontSize['xl']};
+        display: block;
+      }
 
-    @media (min-width: ${device['mobile']}) {
-      display: none;
-    }
-
-    @media (min-width: ${device['tablet']}) {
-      font-size: ${props => props.theme.fontSize['xl']};
-      display: block;
-    }
-
-    @media (min-width: ${device['desktop']}) {
-      font-size: ${props => props.theme.fontSize['2xl']};
+      @media (min-width: ${device['desktop']}) {
+        font-size: ${props => props.theme.fontSize['2xl']};
+      }
     }
   }
 

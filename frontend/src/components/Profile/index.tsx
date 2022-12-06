@@ -26,7 +26,6 @@ export function Profile() {
   );
 
   const languagesCode = languages.filter(language => language === 'pt');
-  console.log(languagesCode);
 
   return (
     <ProfileContainer>

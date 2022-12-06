@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { device } from '../../styles/themes/default';
 
-export const HomeContainer = styled.main`
+export const MyProfileContainer = styled.main`
   display: grid;
   width: 100%;
   justify-content: center;
