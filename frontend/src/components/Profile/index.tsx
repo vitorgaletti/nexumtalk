@@ -1,21 +1,33 @@
+import * as Progress from '@radix-ui/react-progress';
+import { getCode } from 'country-list';
+import { languageNameMap } from 'language-name-map';
 import avatarImg from '../../assets/img/avatar.jpg';
 import bannerImg from '../../assets/img/banner.jpg';
 
-import { AiOutlineEdit } from 'react-icons/ai';
-
-import { MenuBar } from '../MenuBar';
 import {
   BannerProfile,
   HeaderProfile,
   InformationProfile,
+  LanguagesSpeaks,
+  LanguagesSpeaksContent,
+  LanguagesSpeaksItem,
   LocationProfile,
   PhotoProfile,
+  PhotosGalery,
   ProfileContainer,
   ProfileContent,
   StatusProfile
 } from './styles';
 
 export function Profile() {
+  const codeCountry = getCode('Brazil');
+  const languages = Object.entries(languageNameMap).map(
+    language => language[0]
+  );
+
+  const languagesCode = languages.filter(language => language === 'pt');
+  console.log(languagesCode);
+
   return (
     <ProfileContainer>
       <HeaderProfile>
@@ -37,26 +49,87 @@ export function Profile() {
           <LocationProfile>
             <span>Rio de Janeiro, Brazil</span>
             <img
-              src="https://www.countryflagicons.com/FLAT/24/BR.png"
+              src={`https://www.countryflagicons.com/FLAT/24/${codeCountry}.png`}
               alt="Brazil"
+              className="flag"
             />
           </LocationProfile>
-
-          <strong>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Laboriosam, beatae magni nobis veritatis aliquam, pariatur
-            temporibus quae sequi eaque at, cum odit. Explicabo corporis ipsa
-            reiciendis in esse, quas placeat!
-          </strong>
         </InformationProfile>
-        <button>
-          <AiOutlineEdit size={24} />
-          Edit your Profile
-        </button>
 
         <hr />
+        <PhotosGalery>
+          <div className="photos-galery__header">
+            <h2>Photos Galery</h2>
+            <span>See all</span>
+          </div>
+          <div className="photosGalery__images">
+            <img src={avatarImg} alt="Photo Profile" />
+            <img src={avatarImg} alt="Photo Profile" />
+            <img src={avatarImg} alt="Photo Profile" />
+          </div>
+        </PhotosGalery>
+
+        <hr />
+
+        <LanguagesSpeaks>
+          <div className="languages-speaks__header">
+            <h2>Languages Speaks</h2>
+          </div>
+          <LanguagesSpeaksContent>
+            <LanguagesSpeaksItem>
+              <img
+                src={'https://unpkg.com/language-icons/icons/pt.svg'}
+                alt="Portuguese"
+              />
+              <div className="languages-speaks-item__idiom">
+                <p>Portuguese</p>
+                <Progress.Root className="ProgressRoot" value={100}>
+                  <Progress.Indicator
+                    className="ProgressIndicator"
+                    style={{
+                      transform: `translateX(-${100 - 100}%)`
+                    }}
+                  />
+                </Progress.Root>
+              </div>
+            </LanguagesSpeaksItem>
+            <LanguagesSpeaksItem>
+              <img
+                src={'https://unpkg.com/language-icons/icons/en.svg'}
+                alt="Portuguese"
+              />
+              <div className="languages-speaks-item__idiom">
+                <p>English</p>
+                <Progress.Root className="ProgressRoot" value={50}>
+                  <Progress.Indicator
+                    className="ProgressIndicator"
+                    style={{
+                      transform: `translateX(-${100 - 50}%)`
+                    }}
+                  />
+                </Progress.Root>
+              </div>
+            </LanguagesSpeaksItem>
+            <LanguagesSpeaksItem>
+              <img
+                src={'https://unpkg.com/language-icons/icons/es.svg'}
+                alt="Portuguese"
+              />
+              <div className="languages-speaks-item__idiom">
+                <p>Spanish</p>
+                <Progress.Root className="ProgressRoot" value={10}>
+                  <Progress.Indicator
+                    className="ProgressIndicator"
+                    style={{
+                      transform: `translateX(-${100 - 10}%)`
+                    }}
+                  />
+                </Progress.Root>
+              </div>
+            </LanguagesSpeaksItem>
+          </LanguagesSpeaksContent>
+        </LanguagesSpeaks>
       </ProfileContent>
-      <MenuBar />
     </ProfileContainer>
   );
 }

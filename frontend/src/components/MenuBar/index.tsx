@@ -13,49 +13,49 @@ export function MenuBar() {
         <li>
           <a href="#">
             <MdHome />
-            Home
+            <span>Home</span>
           </a>
         </li>
 
         <li>
           <a href="#">
             <BsPersonSquare />
-            My Profile
+            <span>My Profile</span>
           </a>
         </li>
 
         <li>
           <a href="#">
             <MdPhotoSizeSelectActual />
-            Photos
+            <span>Photos</span>
           </a>
         </li>
 
         <li>
           <a href="#">
             <RiMessage2Line />
-            Messages
+            <span>Messages</span>
           </a>
         </li>
 
         <li>
           <a href="#">
             <FaUserFriends />
-            Friends
+            <span>Friends</span>
           </a>
         </li>
 
         <li>
           <a href="#">
             <MdSearch />
-            Search
+            <span>Search</span>
           </a>
         </li>
 
         <li>
           <a href="#">
             <GrView className="icon" />
-            Last Visitors
+            <span>Last Visitors</span>
           </a>
         </li>
       </ul>

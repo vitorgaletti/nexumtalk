@@ -8,23 +8,10 @@ export const ProfileContainer = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
   background-color: white;
-  position: sticky;
-  top: calc(0vh - 440px);
-
-  @media (min-width: ${device['mobile']}) {
-    display: none;
-  }
+  display: none;
 
   @media (min-width: ${device['tablet']}) {
     display: block;
-  }
-
-  @media (min-width: ${device['desktop']}) {
-    top: calc(0vh - 480px);
-  }
-
-  @media (min-width: ${device['desktopLarge']}) {
-    top: calc(0vh - 440px);
   }
 `;
 
@@ -58,7 +45,7 @@ export const PhotoProfile = styled.div`
   max-width: 150px;
   height: 100px;
   position: absolute;
-  top: 11%;
+  top: 190px;
 
   img {
     width: 100%;
@@ -72,42 +59,16 @@ export const ProfileContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
   font-size: ${props => props.theme.fontSize['sm']};
   color: ${props => props.theme.colors['zinc-600']};
 
-  button {
-    padding: 0.75rem 1rem;
-    border: 1px solid ${props => props.theme.colors['sky-500']};
-    background-color: white;
-    border-radius: 8px;
-    color: ${props => props.theme.colors['sky-500']};
-    font-size: ${props => props.theme.fontSize['sm']};
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    outline-color: ${props => props.theme.colors['sky-500']};
-    transition: all 1.2s;
-
-    &:hover {
-      color: white;
-      background-color: ${props => props.theme.colors['sky-500']};
-    }
-
-    @media (min-width: ${device['desktop']}) {
-      font-size: ${props => props.theme.fontSize['base']};
-    }
-  }
-
   hr {
-    max-width: 220px;
-    width: 100%;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
     border: 1px solid ${props => props.theme.colors['gray-300']};
-
-    @media (min-width: ${device['desktop']}) {
-      max-width: 281px;
-    }
+    margin: 0 1rem;
   }
 `;
 
@@ -123,25 +84,6 @@ export const InformationProfile = styled.div`
   p {
     color: ${props => props.theme.colors['zinc-600']};
     color: ${props => props.theme.fontSize['sm']};
-  }
-
-  strong {
-    color: ${props => props.theme.colors['zinc-600']};
-    font-size: ${props => props.theme.fontSize['xs']};
-    text-align: center;
-    font-weight: 700;
-
-    &::before {
-      content: '"';
-    }
-
-    &::after {
-      content: '."';
-    }
-
-    @media (min-width: ${device['desktop']}) {
-      font-size: ${props => props.theme.fontSize['sm']};
-    }
   }
 `;
 
@@ -159,7 +101,7 @@ export const StatusProfile = styled.div`
 
   h4 {
     font-size: ${props => props.theme.fontSize['base']};
-    font-weight: 600;
+    font-weight: 700;
     color: ${props => props.theme.colors['zinc-800']};
   }
 `;
@@ -175,10 +117,119 @@ export const LocationProfile = styled.div`
     font-size: ${props => props.theme.fontSize['sm']};
     color: ${props => props.theme.colors['zinc-600']};
   }
+`;
+
+export const PhotosGalery = styled.div`
+  width: 100%;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+
+  .photos-galery__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      font-size: ${props => props.theme.fontSize['base']};
+      color: ${props => props.theme.colors['zinc-800']};
+    }
+
+    span {
+      font-size: ${props => props.theme.fontSize['sm']};
+      color: ${props => props.theme.colors['sky-500']};
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        filter: brightness(1.2);
+      }
+    }
+  }
+
+  .photosGalery__images {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+      min-width: 70px;
+      width: 100%;
+      width: -moz-available;
+      width: -webkit-fill-available;
+      width: fill-available;
+      height: auto;
+    }
+  }
+`;
+
+export const LanguagesSpeaks = styled.div`
+  width: 100%;
+  padding: 0 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+
+  .languages-speaks__header {
+    h2 {
+      font-size: ${props => props.theme.fontSize['base']};
+      color: ${props => props.theme.colors['zinc-800']};
+    }
+  }
+`;
+
+export const LanguagesSpeaksContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  gap: 1.5rem;
+`;
+
+export const LanguagesSpeaksItem = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 
   img {
-    max-width: 1.5rem;
+    max-width: 2.5rem;
     width: 100%;
-    height: 100%;
+    height: auto;
+    clip-path: circle();
+  }
+
+  .languages-speaks-item__idiom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+    p {
+      font-size: ${props => props.theme.fontSize['sm']};
+      color: ${props => props.theme.colors['zinc-600']};
+      font-weight: 600;
+    }
+
+    .ProgressRoot {
+      position: relative;
+      overflow: hidden;
+      background: ${props => props.theme.colors['gray-300']};
+      border-radius: 99999px;
+      width: 150px;
+      height: 8px;
+      transform: translateZ(0);
+    }
+
+    .ProgressIndicator {
+      background-color: ${props => props.theme.colors['green-500']};
+      width: 100%;
+      height: 100%;
+      transition: transform 660ms cubic-bezier(0.65, 0, 0.35, 1);
+    }
   }
 `;

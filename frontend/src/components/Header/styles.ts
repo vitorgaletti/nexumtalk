@@ -7,13 +7,17 @@ export const ContainerHeader = styled.header`
   background-color: ${props => props.theme.colors['sky-500']};
   padding: 0.75rem 1rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   position: sticky;
   top: 0;
   z-index: 1;
 
   @media (min-width: ${device['tablet']}) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: stretch;
+    align-items: center;
     padding: 1rem 2rem;
   }
 
@@ -21,6 +25,14 @@ export const ContainerHeader = styled.header`
     border: 0;
     outline: none;
     background-color: transparent;
+  }
+
+  .menuDesktop {
+    display: none;
+
+    @media (min-width: ${device['tablet']}) {
+      display: block;
+    }
   }
 `;
 
@@ -88,8 +100,9 @@ export const LogoContent = styled.div`
 export const AvatarContent = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 0.75rem;
+  flex: 1;
 
   h4 {
     color: white;
@@ -129,7 +142,6 @@ export const AvatarContent = styled.div`
 
   .DropdownMenuAvatar {
     display: flex;
-    flex: 1;
     align-items: center;
   }
 `;

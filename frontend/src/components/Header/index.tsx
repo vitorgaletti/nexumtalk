@@ -8,6 +8,7 @@ import logoImg from '/logo.svg';
 
 import { BsPersonSquare } from 'react-icons/bs';
 import { HiOutlineMenu } from 'react-icons/hi';
+import { MenuBar } from '../MenuBar';
 import { MenuMobile } from '../MenuMobile';
 import {
   AvatarContent,
@@ -42,6 +43,9 @@ export function Header() {
         <h1>NexumTalk</h1>
       </LogoContent>
 
+      <div className="menuDesktop">
+        <MenuBar />
+      </div>
       <AvatarContent>
         <MdNotificationsActive size={24} className="icon-notification" />
         <h4>Vitor</h4>
