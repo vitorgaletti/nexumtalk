@@ -13,7 +13,7 @@ import {
   LanguagesSpeaksItem,
   LocationProfile,
   PhotoProfile,
-  PhotosGalery,
+  PhotosGallery,
   ProfileContainer,
   ProfileContent,
   StatusProfile
@@ -57,17 +57,17 @@ export function Profile() {
         </InformationProfile>
 
         <hr />
-        <PhotosGalery>
-          <div className="photos-galery__header">
-            <h2>Photos Galery</h2>
+        <PhotosGallery>
+          <div className="photos-gallery__header">
+            <h2>Photos Gallery</h2>
             <span>See all</span>
           </div>
-          <div className="photosGalery__images">
+          <div className="photos-gallery__images">
             <img src={avatarImg} alt="Photo Profile" />
             <img src={avatarImg} alt="Photo Profile" />
             <img src={avatarImg} alt="Photo Profile" />
           </div>
-        </PhotosGalery>
+        </PhotosGallery>
 
         <hr />
 

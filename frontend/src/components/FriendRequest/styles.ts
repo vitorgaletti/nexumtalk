@@ -116,10 +116,11 @@ export const FriendRequestButtons = styled.div`
     border-radius: 8px;
     font-size: ${props => props.theme.fontSize['sm']};
     font-weight: 700;
-    transition: filter 0.3s;
+    transition: all 0.3s ease-in-out;
 
     &:hover {
       filter: brightness(0.9);
+      transform: scale(1.05);
     }
   }
 
@@ -132,10 +133,11 @@ export const FriendRequestButtons = styled.div`
     font-size: ${props => props.theme.fontSize['sm']};
     font-weight: 700;
 
-    transition: filter 0.3s;
+    transition: all 0.3s ease-in-out;
 
     &:hover {
       filter: brightness(0.7);
+      transform: scale(1.05);
     }
   }
 `;

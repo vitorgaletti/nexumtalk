@@ -119,7 +119,7 @@ export const LocationProfile = styled.div`
   }
 `;
 
-export const PhotosGalery = styled.div`
+export const PhotosGallery = styled.div`
   width: 100%;
   padding: 0 1rem;
   display: flex;
@@ -127,7 +127,7 @@ export const PhotosGalery = styled.div`
   gap: 1rem;
   justify-content: center;
 
-  .photos-galery__header {
+  .photos-gallery__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -150,7 +150,7 @@ export const PhotosGalery = styled.div`
     }
   }
 
-  .photosGalery__images {
+  .photos-gallery__images {
     display: flex;
     gap: 4px;
     align-items: center;
