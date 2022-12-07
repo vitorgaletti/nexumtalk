@@ -97,6 +97,12 @@ export const InformationProfile = styled.div`
       height: auto;
     }
   }
+
+  .information-profile__join-date {
+    font-size: ${props => props.theme.fontSize['xs']};
+    color: ${props => props.theme.colors['zinc-600']};
+    text-align: center;
+  }
 `;
 
 export const StatusProfile = styled.div`

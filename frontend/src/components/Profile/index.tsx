@@ -58,6 +58,10 @@ export function Profile() {
               alt=""
             />
           </div>
+
+          <span className="information-profile__join-date">
+            Joined 10 years ago, profile updated 10 years ago
+          </span>
           <LocationProfile>
             <span>Rio de Janeiro, Brazil</span>
             <img
