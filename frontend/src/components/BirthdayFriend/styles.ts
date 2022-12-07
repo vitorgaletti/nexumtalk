@@ -1,14 +1,17 @@
 import styled from 'styled-components';
 import { device } from '../../styles/themes/default';
 
-export const BirthdayFriendContainer = styled.div`
+interface BirthdayFriendProps {
+  anyBirthdays?: boolean;
+}
+
+export const BirthdayFriendContainer = styled.div<BirthdayFriendProps>`
   width: 100%;
   height: auto;
   padding: 2rem;
 
   flex-direction: column;
   gap: 1.5rem;
-  flex: 1;
   background-color: white;
   border: 1px solid ${props => props.theme.colors['gray-300']};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -18,7 +21,7 @@ export const BirthdayFriendContainer = styled.div`
   }
 
   @media (min-width: ${device['desktop']}) {
-    display: flex;
+    display: ${props => (props.anyBirthdays ? 'flex' : 'none')};
   }
 `;
 
@@ -46,12 +49,12 @@ export const BirthdayFriendHeader = styled.div`
   }
 `;
 
-export const BirthdayFriendContent = styled.div`
+export const BirthdayFriendItem = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  .icon-message {
+  .birthday-friend-content--icon-message {
     color: ${props => props.theme.colors['sky-500']};
   }
 `;
@@ -61,10 +64,9 @@ export const BirthdayFriendProfile = styled.div`
   align-items: center;
   gap: 0.75rem;
 
-  .avatarFriend {
+  .birthday-friend-profile__avatar-friend {
     max-width: 3.625rem;
     height: 3.625rem;
-    border: 3px solid ${props => props.theme.colors['green-500']};
     border-radius: 50%;
     overflow: hidden;
 
@@ -76,7 +78,7 @@ export const BirthdayFriendProfile = styled.div`
   }
 `;
 
-export const BirthdayFriendName = styled.div`
+export const BirthdayFriendProfileContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -92,13 +94,6 @@ export const BirthdayFriendCountry = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
-
-  .flag {
-    max-width: 1.5rem;
-    width: 100%;
-    height: 100%;
-    clip-path: none;
-  }
 
   span {
     font-size: ${props => props.theme.fontSize['sm']};

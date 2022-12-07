@@ -81,9 +81,21 @@ export const InformationProfile = styled.div`
   align-items: center;
   gap: 0.75rem;
 
-  p {
-    color: ${props => props.theme.colors['zinc-600']};
-    color: ${props => props.theme.fontSize['sm']};
+  .information-profile__details {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    p {
+      color: ${props => props.theme.colors['zinc-600']};
+      color: ${props => props.theme.fontSize['sm']};
+    }
+
+    img {
+      max-width: 2rem;
+      width: 100%;
+      height: auto;
+    }
   }
 `;
 

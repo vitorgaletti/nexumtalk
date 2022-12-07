@@ -39,12 +39,12 @@ export function Post({ text, image }: PostProps) {
 
       <PostFooter>
         <PostLikes>
-          <HiHeart size={24} title="Like" className="icon-postLikes" />
+          <HiHeart size={24} title="Like" className="post-likes--like" />
           <span>50</span>
         </PostLikes>
         <PostComments>
           <span>10</span>
-          <p className="comments" title="Comment">
+          <p className="post-comments--comment" title="Comment">
             Comments
           </p>
         </PostComments>

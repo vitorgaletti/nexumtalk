@@ -6,14 +6,18 @@ import avatarImg from '../../assets/img/avatar.jpg';
 import {
   FriendListContainer,
   FriendListContent,
-  FriendListCountry,
   FriendListHeader,
-  FriendListName,
+  FriendListItem,
   FriendListProfile,
+  FriendListProfileAvatar,
+  FriendListProfileCountry,
+  FriendListProfileWrapper,
   FriendListSearch
 } from './styles';
 
 export function FriendList() {
+  const isOnline = true;
+
   return (
     <FriendListContainer>
       <FriendListHeader>
@@ -23,172 +27,232 @@ export function FriendList() {
 
       <FriendListSearch>
         <button>
-          <MdSearch size={24} className="icon-search" />
+          <MdSearch size={24} className="friend-list-search--icon-search" />
         </button>
         <input type="search" placeholder="Search a Friend" />
       </FriendListSearch>
 
-      <div className="friendListWrapper">
-        <FriendListContent>
+      <FriendListContent>
+        <FriendListItem>
           <FriendListProfile>
-            <div className="avatarFriend">
+            <FriendListProfileAvatar isOnline={isOnline}>
               <img src={avatarImg} alt="Profile photo from a birthday friend" />
-            </div>
-            <FriendListName>
+            </FriendListProfileAvatar>
+            <FriendListProfileWrapper>
               <h4>Vitor, 21</h4>
-              <FriendListCountry>
+              <FriendListProfileCountry>
                 <img
                   src="https://www.countryflagicons.com/FLAT/24/BR.png"
                   alt="Brazil"
-                  className="flag"
                 />
                 <span>Brazil</span>
-              </FriendListCountry>
-            </FriendListName>
+              </FriendListProfileCountry>
+            </FriendListProfileWrapper>
           </FriendListProfile>
-          <AiOutlineMessage size={24} className="icon-message" />
-        </FriendListContent>
+          <AiOutlineMessage
+            size={24}
+            className="friend-list-content-item__icon-message"
+          />
+        </FriendListItem>
 
-        <FriendListContent>
+        <FriendListItem>
           <FriendListProfile>
-            <div className="avatarFriend">
+            <FriendListProfileAvatar isOnline={isOnline}>
               <img src={avatarImg} alt="Profile photo from a birthday friend" />
-            </div>
-            <FriendListName>
+            </FriendListProfileAvatar>
+            <FriendListProfileWrapper>
               <h4>Vitor, 21</h4>
-              <FriendListCountry>
+              <FriendListProfileCountry>
                 <img
                   src="https://www.countryflagicons.com/FLAT/24/BR.png"
                   alt="Brazil"
-                  className="flag"
                 />
                 <span>Brazil</span>
-              </FriendListCountry>
-            </FriendListName>
+              </FriendListProfileCountry>
+            </FriendListProfileWrapper>
           </FriendListProfile>
-          <AiOutlineMessage size={24} className="icon-message" />
-        </FriendListContent>
+          <AiOutlineMessage
+            size={24}
+            className="friend-list-content-item__icon-message"
+          />
+        </FriendListItem>
 
-        <FriendListContent>
+        <FriendListItem>
           <FriendListProfile>
-            <div className="avatarFriend">
+            <FriendListProfileAvatar isOnline={isOnline}>
               <img src={avatarImg} alt="Profile photo from a birthday friend" />
-            </div>
-            <FriendListName>
+            </FriendListProfileAvatar>
+            <FriendListProfileWrapper>
               <h4>Vitor, 21</h4>
-              <FriendListCountry>
+              <FriendListProfileCountry>
                 <img
                   src="https://www.countryflagicons.com/FLAT/24/BR.png"
                   alt="Brazil"
-                  className="flag"
                 />
                 <span>Brazil</span>
-              </FriendListCountry>
-            </FriendListName>
+              </FriendListProfileCountry>
+            </FriendListProfileWrapper>
           </FriendListProfile>
-          <AiOutlineMessage size={24} className="icon-message" />
-        </FriendListContent>
+          <AiOutlineMessage
+            size={24}
+            className="friend-list-content-item__icon-message"
+          />
+        </FriendListItem>
 
-        <FriendListContent>
+        <FriendListItem>
           <FriendListProfile>
-            <div className="avatarFriend">
+            <FriendListProfileAvatar isOnline={isOnline}>
               <img src={avatarImg} alt="Profile photo from a birthday friend" />
-            </div>
-            <FriendListName>
+            </FriendListProfileAvatar>
+            <FriendListProfileWrapper>
               <h4>Vitor, 21</h4>
-              <FriendListCountry>
+              <FriendListProfileCountry>
                 <img
                   src="https://www.countryflagicons.com/FLAT/24/BR.png"
                   alt="Brazil"
-                  className="flag"
                 />
                 <span>Brazil</span>
-              </FriendListCountry>
-            </FriendListName>
+              </FriendListProfileCountry>
+            </FriendListProfileWrapper>
           </FriendListProfile>
-          <AiOutlineMessage size={24} className="icon-message" />
-        </FriendListContent>
+          <AiOutlineMessage
+            size={24}
+            className="friend-list-content-item__icon-message"
+          />
+        </FriendListItem>
 
-        <FriendListContent>
+        <FriendListItem>
           <FriendListProfile>
-            <div className="avatarFriend">
+            <FriendListProfileAvatar isOnline={isOnline}>
               <img src={avatarImg} alt="Profile photo from a birthday friend" />
-            </div>
-            <FriendListName>
+            </FriendListProfileAvatar>
+            <FriendListProfileWrapper>
               <h4>Vitor, 21</h4>
-              <FriendListCountry>
+              <FriendListProfileCountry>
                 <img
                   src="https://www.countryflagicons.com/FLAT/24/BR.png"
                   alt="Brazil"
-                  className="flag"
                 />
                 <span>Brazil</span>
-              </FriendListCountry>
-            </FriendListName>
+              </FriendListProfileCountry>
+            </FriendListProfileWrapper>
           </FriendListProfile>
-          <AiOutlineMessage size={24} className="icon-message" />
-        </FriendListContent>
+          <AiOutlineMessage
+            size={24}
+            className="friend-list-content-item__icon-message"
+          />
+        </FriendListItem>
 
-        <FriendListContent>
+        <FriendListItem>
           <FriendListProfile>
-            <div className="avatarFriend">
+            <FriendListProfileAvatar isOnline={isOnline}>
               <img src={avatarImg} alt="Profile photo from a birthday friend" />
-            </div>
-            <FriendListName>
+            </FriendListProfileAvatar>
+            <FriendListProfileWrapper>
               <h4>Vitor, 21</h4>
-              <FriendListCountry>
+              <FriendListProfileCountry>
                 <img
                   src="https://www.countryflagicons.com/FLAT/24/BR.png"
                   alt="Brazil"
-                  className="flag"
                 />
                 <span>Brazil</span>
-              </FriendListCountry>
-            </FriendListName>
+              </FriendListProfileCountry>
+            </FriendListProfileWrapper>
           </FriendListProfile>
-          <AiOutlineMessage size={24} className="icon-message" />
-        </FriendListContent>
+          <AiOutlineMessage
+            size={24}
+            className="friend-list-content-item__icon-message"
+          />
+        </FriendListItem>
 
-        <FriendListContent>
+        <FriendListItem>
           <FriendListProfile>
-            <div className="avatarFriend">
+            <FriendListProfileAvatar isOnline={isOnline}>
               <img src={avatarImg} alt="Profile photo from a birthday friend" />
-            </div>
-            <FriendListName>
+            </FriendListProfileAvatar>
+            <FriendListProfileWrapper>
               <h4>Vitor, 21</h4>
-              <FriendListCountry>
+              <FriendListProfileCountry>
                 <img
                   src="https://www.countryflagicons.com/FLAT/24/BR.png"
                   alt="Brazil"
-                  className="flag"
                 />
                 <span>Brazil</span>
-              </FriendListCountry>
-            </FriendListName>
+              </FriendListProfileCountry>
+            </FriendListProfileWrapper>
           </FriendListProfile>
-          <AiOutlineMessage size={24} className="icon-message" />
-        </FriendListContent>
+          <AiOutlineMessage
+            size={24}
+            className="friend-list-content-item__icon-message"
+          />
+        </FriendListItem>
 
-        <FriendListContent>
+        <FriendListItem>
           <FriendListProfile>
-            <div className="avatarFriend">
+            <FriendListProfileAvatar isOnline={isOnline}>
               <img src={avatarImg} alt="Profile photo from a birthday friend" />
-            </div>
-            <FriendListName>
+            </FriendListProfileAvatar>
+            <FriendListProfileWrapper>
               <h4>Vitor, 21</h4>
-              <FriendListCountry>
+              <FriendListProfileCountry>
                 <img
                   src="https://www.countryflagicons.com/FLAT/24/BR.png"
                   alt="Brazil"
-                  className="flag"
                 />
                 <span>Brazil</span>
-              </FriendListCountry>
-            </FriendListName>
+              </FriendListProfileCountry>
+            </FriendListProfileWrapper>
           </FriendListProfile>
-          <AiOutlineMessage size={24} className="icon-message" />
-        </FriendListContent>
-      </div>
+          <AiOutlineMessage
+            size={24}
+            className="friend-list-content-item__icon-message"
+          />
+        </FriendListItem>
+
+        <FriendListItem>
+          <FriendListProfile>
+            <FriendListProfileAvatar isOnline={isOnline}>
+              <img src={avatarImg} alt="Profile photo from a birthday friend" />
+            </FriendListProfileAvatar>
+            <FriendListProfileWrapper>
+              <h4>Vitor, 21</h4>
+              <FriendListProfileCountry>
+                <img
+                  src="https://www.countryflagicons.com/FLAT/24/BR.png"
+                  alt="Brazil"
+                />
+                <span>Brazil</span>
+              </FriendListProfileCountry>
+            </FriendListProfileWrapper>
+          </FriendListProfile>
+          <AiOutlineMessage
+            size={24}
+            className="friend-list-content-item__icon-message"
+          />
+        </FriendListItem>
+
+        <FriendListItem>
+          <FriendListProfile>
+            <FriendListProfileAvatar isOnline={isOnline}>
+              <img src={avatarImg} alt="Profile photo from a birthday friend" />
+            </FriendListProfileAvatar>
+            <FriendListProfileWrapper>
+              <h4>Vitor, 21</h4>
+              <FriendListProfileCountry>
+                <img
+                  src="https://www.countryflagicons.com/FLAT/24/BR.png"
+                  alt="Brazil"
+                />
+                <span>Brazil</span>
+              </FriendListProfileCountry>
+            </FriendListProfileWrapper>
+          </FriendListProfile>
+          <AiOutlineMessage
+            size={24}
+            className="friend-list-content-item__icon-message"
+          />
+        </FriendListItem>
+      </FriendListContent>
     </FriendListContainer>
   );
 }

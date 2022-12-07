@@ -33,7 +33,7 @@ export function Header() {
             </button>
           </Dialog.Trigger>
           <Dialog.Portal>
-            <Dialog.Overlay className="DialogOverlay" />
+            <Dialog.Overlay className="dialog-overlay" />
             <Dialog.Content>
               <MenuMobile />
             </Dialog.Content>
@@ -64,29 +64,29 @@ export function Header() {
             <DropdownMenuContent>
               <DropdownMenu.Arrow className="DropdownMenuArrow" />
               <DropdownMenu.Item className="DropwdowMenuItem">
-                <a href="">
+                <NavLink to="/myprofile">
                   <BsPersonSquare />
                   My profile
-                </a>
+                </NavLink>
               </DropdownMenu.Item>
               <DropdownMenu.Item className="DropwdowMenuItem">
-                <a href="">
+                <NavLink to="/myprofile/editprofile">
                   <FiEdit />
                   Edit Profile
-                </a>
+                </NavLink>
               </DropdownMenu.Item>
               <DropdownMenu.Item className="DropwdowMenuItem">
-                <a href="">
+                <NavLink to="/settings">
                   <FiSettings />
                   Settings
-                </a>
+                </NavLink>
               </DropdownMenu.Item>
               <DropdownMenu.Separator className="DropdownMenuSeparator" />
               <DropdownMenu.Item className="DropwdowMenuItem">
-                <a href="">
+                <NavLink to="/logout">
                   <RiLogoutBoxLine />
                   Logout
-                </a>
+                </NavLink>
               </DropdownMenu.Item>
             </DropdownMenuContent>
           </DropdownMenu.Portal>

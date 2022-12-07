@@ -4,80 +4,43 @@ import avatarImg from '../../assets/img/avatar.jpg';
 
 import {
   BirthdayFriendContainer,
-  BirthdayFriendContent,
   BirthdayFriendCountry,
   BirthdayFriendHeader,
-  BirthdayFriendName,
-  BirthdayFriendProfile
+  BirthdayFriendItem,
+  BirthdayFriendProfile,
+  BirthdayFriendProfileContent
 } from './styles';
 
 export function BirthdayFriend() {
+  const birthday = true;
   return (
-    <BirthdayFriendContainer>
+    <BirthdayFriendContainer anyBirthdays={birthday}>
       <BirthdayFriendHeader>
         <h2>Birthday</h2>
         <span>See all</span>
       </BirthdayFriendHeader>
 
-      <BirthdayFriendContent>
+      <BirthdayFriendItem>
         <BirthdayFriendProfile>
-          <div className="avatarFriend">
+          <div className="birthday-friend-profile__avatar-friend">
             <img src={avatarImg} alt="Profile photo from a birthday friend" />
           </div>
-          <BirthdayFriendName>
+          <BirthdayFriendProfileContent>
             <h4>Vitor, 21</h4>
             <BirthdayFriendCountry>
               <img
                 src="https://www.countryflagicons.com/FLAT/24/BR.png"
                 alt="Brazil"
-                className="flag"
               />
               <span>Brazil</span>
             </BirthdayFriendCountry>
-          </BirthdayFriendName>
+          </BirthdayFriendProfileContent>
         </BirthdayFriendProfile>
-        <AiOutlineMessage size={24} className="icon-message" />
-      </BirthdayFriendContent>
-
-      <BirthdayFriendContent>
-        <BirthdayFriendProfile>
-          <div className="avatarFriend">
-            <img src={avatarImg} alt="Profile photo from a birthday friend" />
-          </div>
-          <BirthdayFriendName>
-            <h4>Vitor, 22</h4>
-            <BirthdayFriendCountry>
-              <img
-                src="https://www.countryflagicons.com/FLAT/24/BR.png"
-                alt="Brazil"
-                className="flag"
-              />
-              <span>Brazil</span>
-            </BirthdayFriendCountry>
-          </BirthdayFriendName>
-        </BirthdayFriendProfile>
-        <AiOutlineMessage size={24} className="icon-message" />
-      </BirthdayFriendContent>
-
-      <BirthdayFriendContent>
-        <BirthdayFriendProfile>
-          <div className="avatarFriend">
-            <img src={avatarImg} alt="Profile photo from a birthday friend" />
-          </div>
-          <BirthdayFriendName>
-            <h4>Vitor, 23</h4>
-            <BirthdayFriendCountry>
-              <img
-                src="https://www.countryflagicons.com/FLAT/24/BR.png"
-                alt="Brazil"
-                className="flag"
-              />
-              <span>Brazil</span>
-            </BirthdayFriendCountry>
-          </BirthdayFriendName>
-        </BirthdayFriendProfile>
-        <AiOutlineMessage size={24} className="icon-message" />
-      </BirthdayFriendContent>
+        <AiOutlineMessage
+          size={24}
+          className="birthday-friend-content--icon-message"
+        />
+      </BirthdayFriendItem>
     </BirthdayFriendContainer>
   );
 }

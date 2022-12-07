@@ -54,7 +54,7 @@ export function MenuBar() {
 
         <li>
           <NavLink to="/myprofile/lastvisitors">
-            <GrView className="icon" />
+            <GrView className="last-visitors--icon" />
             <span>Last Visitors</span>
           </NavLink>
         </li>

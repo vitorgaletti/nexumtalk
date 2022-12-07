@@ -3,92 +3,44 @@ import avatarImg from '../../assets/img/avatar.jpg';
 import {
   FriendRequestButtons,
   FriendRequestContainer,
-  FriendRequestContent,
   FriendRequestCountry,
   FriendRequestHeader,
-  FriendRequestName,
-  FriendRequestProfile
+  FriendRequestItem,
+  FriendRequestProfile,
+  FriendRequestProfileContent
 } from './styles';
 
 export function FriendRequest() {
+  const friendRequest = true;
   return (
-    <FriendRequestContainer>
+    <FriendRequestContainer haveFriendRequest={friendRequest}>
       <FriendRequestHeader>
         <h2>Friend Request</h2>
         <span>See all</span>
       </FriendRequestHeader>
 
-      <FriendRequestContent>
+      <FriendRequestItem>
         <FriendRequestProfile>
-          <div className="avatarRequestFriend">
+          <div className="friend-request-profile__avatar">
             <img src={avatarImg} alt="Profile photo from a request friend" />
           </div>
-          <FriendRequestName>
+          <FriendRequestProfileContent>
             <h4>Vitor</h4>
             <FriendRequestCountry>
               <img
                 src="https://www.countryflagicons.com/FLAT/24/BR.png"
                 alt="Brazil"
-                className="flag"
               />
               <span>Brazil</span>
             </FriendRequestCountry>
-          </FriendRequestName>
+          </FriendRequestProfileContent>
         </FriendRequestProfile>
 
         <FriendRequestButtons>
-          <button className="confirmButton">Confirm</button>
-          <button className="declineButton">Decline</button>
+          <button className="friend-request-buttons--confirm">Confirm</button>
+          <button className="friend-request-buttons--decline">Decline</button>
         </FriendRequestButtons>
-      </FriendRequestContent>
-
-      <FriendRequestContent>
-        <FriendRequestProfile>
-          <div className="avatarRequestFriend">
-            <img src={avatarImg} alt="Profile photo from a request friend" />
-          </div>
-          <FriendRequestName>
-            <h4>Vitor</h4>
-            <FriendRequestCountry>
-              <img
-                src="https://www.countryflagicons.com/FLAT/24/BR.png"
-                alt="Brazil"
-                className="flag"
-              />
-              <span>Brazil</span>
-            </FriendRequestCountry>
-          </FriendRequestName>
-        </FriendRequestProfile>
-
-        <FriendRequestButtons>
-          <button className="confirmButton">Confirm</button>
-          <button className="declineButton">Decline</button>
-        </FriendRequestButtons>
-      </FriendRequestContent>
-
-      <FriendRequestContent>
-        <FriendRequestProfile>
-          <div className="avatarRequestFriend">
-            <img src={avatarImg} alt="Profile photo from a request friend" />
-          </div>
-          <FriendRequestName>
-            <h4>Vitor</h4>
-            <FriendRequestCountry>
-              <img
-                src="https://www.countryflagicons.com/FLAT/24/BR.png"
-                alt="Brazil"
-                className="flag"
-              />
-              <span>Brazil</span>
-            </FriendRequestCountry>
-          </FriendRequestName>
-        </FriendRequestProfile>
-
-        <FriendRequestButtons>
-          <button className="confirmButton">Confirm</button>
-          <button className="declineButton">Decline</button>
-        </FriendRequestButtons>
-      </FriendRequestContent>
+      </FriendRequestItem>
     </FriendRequestContainer>
   );
 }

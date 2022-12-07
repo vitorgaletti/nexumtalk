@@ -119,7 +119,7 @@ export const PostLikes = styled.div`
   align-items: center;
   gap: 0.5rem;
 
-  .icon-postLikes {
+  .post-likes--like {
     color: ${props => props.theme.colors['rose-500']};
     cursor: pointer;
     transition: all 0.3s;
@@ -146,7 +146,7 @@ export const PostComments = styled.div`
   align-items: center;
   gap: 8px;
 
-  .comments {
+  .post-comments--comment {
     padding: 0;
     color: ${props => props.theme.colors['zinc-800']};
     cursor: pointer;

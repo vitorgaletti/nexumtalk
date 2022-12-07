@@ -9,10 +9,16 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-
-  body {
+  html, body {
     width: 100%;
     height: 100%;
+
+    scrollbar-color: ${props => props.theme.colors['gray-300']} ${props =>
+  props.theme.colors['zinc-100']};
+    scrollbar-width: thin;
+  }
+
+  body {
     background-color: ${props => props.theme.colors['zinc-100']};
     -webkit-font-smoothing: antialiased;
     }
@@ -29,8 +35,8 @@ export const GlobalStyle = createGlobalStyle`
       @media (min-width: ${device['tablet']}){
         padding: 1rem 2rem;
       }
-    }
 
+    }
 
     h1, h2, h3, h4, h5, h6, strong {
       font-weight: 700;
@@ -40,10 +46,16 @@ export const GlobalStyle = createGlobalStyle`
       cursor: pointer;
     }
 
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
     [disabled] {
       opacity: 0.6;
       cursor: not-allowed;
     }
+
 
     &::-webkit-scrollbar-track {
       box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
@@ -51,6 +63,7 @@ export const GlobalStyle = createGlobalStyle`
       border-radius: 1rem;
       background-color: ${props => props.theme.colors['zinc-100']};
     }
+
 
     &::-webkit-scrollbar {
       width: 10px;
@@ -64,7 +77,7 @@ export const GlobalStyle = createGlobalStyle`
       -webkit-border-radius: 1em;
     }
 
-    .DialogOverlay {
+    .dialog-overlay {
       background-color: ${props => props.theme.colors['overlay']};
       position: fixed;
       inset: 0;

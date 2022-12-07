@@ -4,7 +4,7 @@ import { device } from '../../styles/themes/default';
 export const HomeContainer = styled.main`
   display: grid;
   width: 100%;
-  justify-content: center;
+  justify-content: space-between;
 
   @media (min-width: ${device['mobile']}) {
     grid-template-columns: 1fr;

@@ -1,15 +1,17 @@
 import styled from 'styled-components';
 import { device } from '../../styles/themes/default';
 
-export const FriendRequestContainer = styled.div`
+interface FriendRequestProps {
+  haveFriendRequest?: boolean;
+}
+
+export const FriendRequestContainer = styled.div<FriendRequestProps>`
   width: 100%;
   height: auto;
-  margin-top: 1.5rem;
 
   padding: 2rem;
   flex-direction: column;
   gap: 1.5rem;
-  flex: 1;
 
   background-color: white;
   border: 1px solid ${props => props.theme.colors['gray-300']};
@@ -20,7 +22,7 @@ export const FriendRequestContainer = styled.div`
   }
 
   @media (min-width: ${device['desktop']}) {
-    display: flex;
+    display: ${props => (props.haveFriendRequest ? 'flex' : 'none')};
   }
 `;
 
@@ -48,7 +50,7 @@ export const FriendRequestHeader = styled.div`
   }
 `;
 
-export const FriendRequestContent = styled.div`
+export const FriendRequestItem = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,7 +62,7 @@ export const FriendRequestProfile = styled.div`
   align-items: center;
   gap: 0.75rem;
 
-  .avatarRequestFriend {
+  .friend-request-profile__avatar {
     max-width: 3.625rem;
     height: 3.625rem;
     border-radius: 50%;
@@ -74,7 +76,7 @@ export const FriendRequestProfile = styled.div`
   }
 `;
 
-export const FriendRequestName = styled.div`
+export const FriendRequestProfileContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -91,13 +93,6 @@ export const FriendRequestCountry = styled.div`
   align-items: center;
   gap: 8px;
 
-  .flag {
-    max-width: 1.5rem;
-    width: 100%;
-    height: 100%;
-    clip-path: none;
-  }
-
   span {
     font-size: ${props => props.theme.fontSize['sm']};
     color: ${props => props.theme.colors['zinc-800']};
@@ -108,7 +103,7 @@ export const FriendRequestButtons = styled.div`
   display: flex;
   gap: 1.5rem;
 
-  .confirmButton {
+  .friend-request-buttons--confirm {
     padding: 0.75rem 1rem;
     border: 0;
     background-color: ${props => props.theme.colors['sky-500']};
@@ -124,7 +119,7 @@ export const FriendRequestButtons = styled.div`
     }
   }
 
-  .declineButton {
+  .friend-request-buttons--decline {
     padding: 0.75rem 1rem;
     border: 0;
     background-color: ${props => props.theme.colors['gray-300']};

@@ -59,7 +59,7 @@ export const MenuContainer = styled.nav`
         }
       }
 
-      .icon path {
+      .last-visitors--icon path {
         stroke: ${props => props.theme.colors['sky-500']};
 
         @media (min-width: ${device['tablet']}) {
