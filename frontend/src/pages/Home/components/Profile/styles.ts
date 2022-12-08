@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { device } from '../../styles/themes/default';
+import { device } from '../../../../styles/themes/default';
 
 export const ProfileContainer = styled.div`
   width: 100%;
@@ -9,6 +9,7 @@ export const ProfileContainer = styled.div`
   border-radius: 4px;
   background-color: white;
   display: none;
+  padding-bottom: 2rem;
 
   @media (min-width: ${device['tablet']}) {
     display: block;
@@ -181,73 +182,6 @@ export const PhotosGallery = styled.div`
       width: -webkit-fill-available;
       width: fill-available;
       height: auto;
-    }
-  }
-`;
-
-export const LanguagesSpeaks = styled.div`
-  width: 100%;
-  padding: 0 1rem 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  justify-content: center;
-
-  .languages-speaks__header {
-    h2 {
-      font-size: ${props => props.theme.fontSize['base']};
-      color: ${props => props.theme.colors['zinc-800']};
-    }
-  }
-`;
-
-export const LanguagesSpeaksContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  justify-content: center;
-  gap: 1.5rem;
-`;
-
-export const LanguagesSpeaksItem = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-
-  img {
-    max-width: 2.5rem;
-    width: 100%;
-    height: auto;
-    clip-path: circle();
-  }
-
-  .languages-speaks-item__idiom {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-
-    p {
-      font-size: ${props => props.theme.fontSize['sm']};
-      color: ${props => props.theme.colors['zinc-600']};
-      font-weight: 600;
-    }
-
-    .ProgressRoot {
-      position: relative;
-      overflow: hidden;
-      background: ${props => props.theme.colors['gray-300']};
-      border-radius: 99999px;
-      width: 150px;
-      height: 8px;
-      transform: translateZ(0);
-    }
-
-    .ProgressIndicator {
-      background-color: ${props => props.theme.colors['green-500']};
-      width: 100%;
-      height: 100%;
-      transition: transform 660ms cubic-bezier(0.65, 0, 0.35, 1);
     }
   }
 `;
