@@ -1,7 +1,7 @@
+import { FriendRequest } from '../../pages/Home/components/FriendRequest';
 import { FriendList } from '../FriendList';
-import { FriendRequest } from '../FriendRequest';
 
-import { BirthdayFriend } from '../BirthdayFriend';
+import { BirthdayFriend } from '../../pages/Home/components/BirthdayFriend';
 import { SidebarContainer } from './styles';
 export function Sidebar() {
   return (

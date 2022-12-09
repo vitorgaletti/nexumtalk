@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { device } from '../../styles/themes/default';
+import { device } from '../../../../styles/themes/default';
 
 interface BirthdayFriendProps {
   anyBirthdays?: boolean;

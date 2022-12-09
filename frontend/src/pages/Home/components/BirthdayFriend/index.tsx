@@ -1,6 +1,6 @@
 import { AiOutlineMessage } from 'react-icons/ai';
 
-import avatarImg from '../../assets/img/avatar.jpg';
+import avatarImg from '../../../../assets/img/avatar.jpg';
 
 import {
   BirthdayFriendContainer,

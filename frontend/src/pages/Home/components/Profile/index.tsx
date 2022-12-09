@@ -2,7 +2,7 @@ import { getCode } from 'country-list';
 import { useState } from 'react';
 import avatarImg from '../../../../assets/img/avatar.jpg';
 import bannerImg from '../../../../assets/img/banner.jpg';
-import { ProfileLanguages } from '../ProfileLanguages';
+import { ProfileLanguages } from '../../../../components/ProfileLanguages';
 
 import {
   BannerProfile,
