@@ -9,8 +9,8 @@ import logoImg from '/logo.svg';
 import { BsPersonSquare } from 'react-icons/bs';
 import { HiOutlineMenu } from 'react-icons/hi';
 import { NavLink } from 'react-router-dom';
-import { MenuBar } from '../MenuBar';
-import { MenuMobile } from '../MenuMobile';
+import { Navbar } from '../Navbar';
+import { NavbarMobile } from '../NavbarMobile';
 import {
   AvatarContent,
   ContainerHeader,
@@ -35,7 +35,7 @@ export function Header() {
           <Dialog.Portal>
             <Dialog.Overlay className="dialog-overlay" />
             <Dialog.Content>
-              <MenuMobile />
+              <NavbarMobile />
             </Dialog.Content>
           </Dialog.Portal>
         </Dialog.Root>
@@ -47,7 +47,7 @@ export function Header() {
       </LogoContent>
 
       <div className="menu-desktop">
-        <MenuBar />
+        <Navbar />
       </div>
       <AvatarContent>
         <MdNotificationsActive size={24} className="icon-notification" />

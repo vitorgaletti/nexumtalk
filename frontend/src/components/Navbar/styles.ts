@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { device } from '../../styles/themes/default';
 
-export const MenuContainer = styled.nav`
+export const NavbarContainer = styled.nav`
   width: 100%;
   margin-top: 2rem;
 

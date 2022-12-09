@@ -1,18 +1,18 @@
 import logoImg from '/logo.svg';
 
 import { NavLink } from 'react-router-dom';
-import { MenuBar } from '../MenuBar';
-import { MenuMobileContainer } from './styles';
+import { Navbar } from '../Navbar';
+import { NavbarMobileContainer } from './styles';
 
-export function MenuMobile() {
+export function NavbarMobile() {
   return (
-    <MenuMobileContainer>
+    <NavbarMobileContainer>
       <NavLink to="/">
         <img src={logoImg} alt="Logo" />
         <h1>NexumTalk</h1>
       </NavLink>
       <hr />
-      <MenuBar />
-    </MenuMobileContainer>
+      <Navbar />
+    </NavbarMobileContainer>
   );
 }

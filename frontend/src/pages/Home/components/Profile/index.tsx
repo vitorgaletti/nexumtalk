@@ -25,7 +25,6 @@ export function Profile() {
   const [genderProfile, setGenderProfile] =
     useState<GenderProfileProps['gender']>('male');
 
-  console.log(genderProfile);
   return (
     <ProfileContainer>
       <HeaderProfile>

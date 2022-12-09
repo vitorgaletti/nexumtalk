@@ -4,11 +4,11 @@ import { GrView } from 'react-icons/gr';
 import { MdHome, MdPhotoSizeSelectActual, MdSearch } from 'react-icons/md';
 import { RiMessage2Line } from 'react-icons/ri';
 import { NavLink } from 'react-router-dom';
-import { MenuContainer } from './styles';
+import { NavbarContainer } from './styles';
 
-export function MenuBar() {
+export function Navbar() {
   return (
-    <MenuContainer>
+    <NavbarContainer>
       <ul>
         <li>
           <NavLink to="/" title="Home">
@@ -59,6 +59,6 @@ export function MenuBar() {
           </NavLink>
         </li>
       </ul>
-    </MenuContainer>
+    </NavbarContainer>
   );
 }
