@@ -9,7 +9,7 @@ export const ProfileLanguagesContainer = styled.div`
   justify-content: center;
 
   .profile-languages__header {
-    h2 {
+    h3 {
       font-size: ${props => props.theme.fontSize['base']};
       color: ${props => props.theme.colors['zinc-800']};
     }
@@ -40,7 +40,7 @@ export const ProfileLanguagesItem = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
+    gap: 0.625rem;
 
     p {
       font-size: ${props => props.theme.fontSize['sm']};
@@ -53,8 +53,8 @@ export const ProfileLanguagesItem = styled.div`
       overflow: hidden;
       background: ${props => props.theme.colors['gray-300']};
       border-radius: 99999px;
-      width: 150px;
-      height: 8px;
+      width: 9.375rem;
+      height: 0.5rem;
       transform: translateZ(0);
     }
 

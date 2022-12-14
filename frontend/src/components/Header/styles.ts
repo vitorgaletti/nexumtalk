@@ -148,7 +148,7 @@ export const AvatarContent = styled.div`
 `;
 
 export const DropdownMenuContent = styled(DropdownMenu.Content)`
-  min-width: 200px;
+  min-width: 12.5rem;
   width: 100%;
   height: auto;
   background-color: white;

@@ -13,7 +13,7 @@ export function ProfileLanguages({ title }: ProfileLanguagesProps) {
   return (
     <ProfileLanguagesContainer>
       <div className="profile-languages__header">
-        <h2>{title}</h2>
+        <h3>{title}</h3>
       </div>
       <ProfileLanguagesContent>
         <ProfileLanguagesItem>

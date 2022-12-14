@@ -1,7 +1,7 @@
 import { AiOutlineMessage } from 'react-icons/ai';
 import { MdSearch } from 'react-icons/md';
 
-import avatarImg from '../../assets/img/avatar.jpg';
+import avatarImg from '../../../../assets/img/avatar.jpg';
 
 import {
   FriendListContainer,

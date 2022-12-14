@@ -108,7 +108,7 @@ export const InformationProfile = styled.div`
 
 export const StatusProfile = styled.div`
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   align-items: center;
 
   span {
@@ -128,7 +128,7 @@ export const StatusProfile = styled.div`
 export const LocationProfile = styled.div`
   width: fit-content;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   align-items: center;
   text-align: center;
 
@@ -171,7 +171,7 @@ export const PhotosGallery = styled.div`
 
   .photos-gallery__images {
     display: flex;
-    gap: 4px;
+    gap: 0.25rem;
     align-items: center;
     justify-content: space-between;
 

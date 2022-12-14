@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-import { device } from './themes/default';
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -29,15 +28,6 @@ export const GlobalStyle = createGlobalStyle`
       font-weight: 400;
     }
 
-    main {
-      padding: 1rem;
-
-      @media (min-width: ${device['tablet']}){
-        padding: 1rem 2rem;
-      }
-
-    }
-
     h1, h2, h3, h4, h5, h6, strong {
       font-weight: 700;
     }
@@ -49,6 +39,10 @@ export const GlobalStyle = createGlobalStyle`
     a {
       color: inherit;
       text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
     }
 
     [disabled] {

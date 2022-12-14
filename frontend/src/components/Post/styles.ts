@@ -40,8 +40,8 @@ export const PostTitle = styled.p<PostProps>`
 
 export const PostImage = styled.img<PostProps>`
   display: ${props => (props.image ? 'block' : 'none')};
-  max-width: 736px;
-  max-height: 400px;
+  max-width: 46rem;
+  max-height: 25rem;
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
@@ -52,7 +52,7 @@ export const PostImage = styled.img<PostProps>`
 export const PostHeader = styled.div`
   padding: 0 1rem;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
 
   @media (min-width: ${device['desktop']}) {
     padding: 0rem 1.5rem;
@@ -68,7 +68,7 @@ export const PostHeader = styled.div`
   div {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 0.25rem;
 
     h4 {
       font-size: ${props => props.theme.fontSize['sm']};
@@ -144,7 +144,7 @@ export const PostLikes = styled.div`
 export const PostComments = styled.div`
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
 
   .post-comments--comment {
     padding: 0;

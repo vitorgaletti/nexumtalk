@@ -1,5 +1,5 @@
+import { FriendList } from '../../pages/Home/components/FriendList';
 import { FriendRequest } from '../../pages/Home/components/FriendRequest';
-import { FriendList } from '../FriendList';
 
 import { BirthdayFriend } from '../../pages/Home/components/BirthdayFriend';
 import { SidebarContainer } from './styles';

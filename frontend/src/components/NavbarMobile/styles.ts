@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const NavbarMobileContainer = styled.div`
   max-width: calc(100vw - 30%);
   width: 100%;
-  height: 480px;
+  height: 30rem;
   padding: 1rem;
   background-color: white;
   position: fixed;

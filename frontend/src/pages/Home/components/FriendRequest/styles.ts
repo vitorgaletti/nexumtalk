@@ -79,7 +79,7 @@ export const FriendRequestProfile = styled.div`
 export const FriendRequestProfileContent = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.5rem;
   align-items: flex-start;
 
   h4 {
@@ -91,7 +91,7 @@ export const FriendRequestProfileContent = styled.div`
 export const FriendRequestCountry = styled.div`
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
 
   span {
     font-size: ${props => props.theme.fontSize['sm']};
