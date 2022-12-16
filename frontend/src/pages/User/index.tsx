@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { FiEdit } from 'react-icons/fi';
 import { NavLink, useLocation, useParams } from 'react-router-dom';
 import avatarImg from '../../assets/img/avatar.jpg';
@@ -16,15 +17,26 @@ import {
   UserMenu,
   UserStatus
 } from './styles';
+
+interface UserProps {
+  gender: 'male' | 'female';
+}
 export function User() {
   const { nickname } = useParams();
   const { pathname } = useLocation();
   const hasSubPages = pathname.includes(`${nickname}/`);
 
+  const [genderProfile, setGenderProfile] =
+    useState<UserProps['gender']>('male');
+
   return (
     <UserContainer>
       <UserContainerTop>
-        <img src={bannerImg} alt="Profile Banner" />
+        <img
+          src={bannerImg}
+          alt="Profile Banner"
+          className="user-container-top__banner"
+        />
         <UserCard>
           <UserCardProfile>
             <img src={avatarImg} alt="Avatar" />
@@ -32,10 +44,21 @@ export function User() {
               <div className="status"></div>
               <span>Online</span>
             </UserStatus>
-            <h4>
-              Vitor <span>|</span>{' '}
-              <span className="user-card__name"> vitor97, 25 y.o.</span>
-            </h4>
+
+            <div className="user-card-profile__details">
+              <h4>
+                Vitor <span>|</span>{' '}
+                <span className="user-card__name"> vitor97, 25 y.o.</span>
+              </h4>
+              <img
+                src={`${
+                  genderProfile === 'male'
+                    ? 'https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/boy_1f466.png'
+                    : 'https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/girl_1f467.png'
+                }`}
+                alt=""
+              />
+            </div>
             <div className="user_card__location">
               <span>Rio de Janeiro</span>
               <img
@@ -43,12 +66,11 @@ export function User() {
                 alt="Brazil"
               />
             </div>
-
-            <UserCardProfileButton>
-              <FiEdit />
-              Edit your profile
-            </UserCardProfileButton>
           </UserCardProfile>
+          <UserCardProfileButton>
+            <FiEdit />
+            Edit your profile
+          </UserCardProfileButton>
         </UserCard>
       </UserContainerTop>
 

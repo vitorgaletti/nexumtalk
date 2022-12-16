@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../../../styles/themes/default';
 
 interface FriendProfileItemAvatarProps {
   isOnline: boolean;
@@ -15,18 +16,19 @@ export const FriendsContainer = styled.div`
   flex-direction: column;
   gap: 1.5rem;
 
-  hr {
-    margin: 0 !important;
+  @media (min-width: ${device['tablet']}) {
+    padding: 2rem;
   }
 `;
 
-export const FriendSearch = styled.div`
+export const FriendsSearch = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 
   .friend-search__field {
+    width: fit-content;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -46,6 +48,7 @@ export const FriendSearch = styled.div`
       border: none;
       outline: none;
       color: ${props => props.theme.colors['zinc-600']};
+      font-size: ${props => props.theme.fontSize['base']};
       font-weight: 600;
 
       &::placeholder {
@@ -55,9 +58,32 @@ export const FriendSearch = styled.div`
       }
     }
   }
+
+  .friends-search--separator {
+    margin: 0;
+  }
 `;
 
-export const FriendProfileItem = styled.div`
+export const FriendsProfiles = styled.div`
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+
+  @media (min-width: ${device['tablet']}) {
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+    row-gap: 3rem;
+  }
+
+  .friends-profiles--separator {
+    margin: 1.5rem auto;
+
+    @media (min-width: ${device['tablet']}) {
+      display: none;
+    }
+  }
+`;
+
+export const FriendsProfileItem = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
@@ -65,7 +91,7 @@ export const FriendProfileItem = styled.div`
   gap: 1rem;
 `;
 
-export const FriendProfileItemAvatar = styled.div<FriendProfileItemAvatarProps>`
+export const FriendsProfileItemAvatar = styled.div<FriendProfileItemAvatarProps>`
   max-width: 5.625rem;
   height: 5.625rem;
   border: ${props =>
@@ -80,7 +106,7 @@ export const FriendProfileItemAvatar = styled.div<FriendProfileItemAvatarProps>`
   }
 `;
 
-export const FriendProfileItemContent = styled.div`
+export const FriendsProfileItemContent = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -92,6 +118,10 @@ export const FriendProfileItemContent = styled.div`
     font-weight: 700;
     color: ${props => props.theme.colors['sky-500']};
 
+    @media (min-width: ${device['tablet']}) {
+      font-size: ${props => props.theme.fontSize['base']};
+    }
+
     .friend-profile-item-content--separator {
       color: ${props => props.theme.colors['gray-300']};
     }
@@ -100,11 +130,15 @@ export const FriendProfileItemContent = styled.div`
       font-size: ${props => props.theme.fontSize['sm']};
       font-weight: 400;
       color: ${props => props.theme.colors['zinc-600']};
+
+      @media (min-width: ${device['tablet']}) {
+        font-size: ${props => props.theme.fontSize['base']};
+      }
     }
   }
 `;
 
-export const FriendProfileCountry = styled.div`
+export const FriendsProfileCountry = styled.div`
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -114,6 +148,10 @@ export const FriendProfileCountry = styled.div`
     font-size: ${props => props.theme.fontSize['xs']};
     color: ${props => props.theme.colors['zinc-600']};
     word-break: break-word;
+
+    @media (min-width: ${device['tablet']}) {
+      font-size: ${props => props.theme.fontSize['sm']};
+    }
   }
 
   img {

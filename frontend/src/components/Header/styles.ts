@@ -173,29 +173,28 @@ export const DropdownMenuContent = styled(DropdownMenu.Content)`
     margin: 5px 0;
   }
 
-  .DropwdowMenuItem {
+  a {
     outline-color: ${props => props.theme.colors['sky-500']};
-    a {
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: ${props => props.theme.colors['zinc-800']};
-      font-size: ${props => props.theme.fontSize['sm']};
-      font-weight: 700;
 
-      svg {
-        color: ${props => props.theme.colors['sky-500']};
-        font-size: ${props => props.theme.fontSize['xl']};
-      }
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: ${props => props.theme.colors['zinc-800']};
+    font-size: ${props => props.theme.fontSize['sm']};
+    font-weight: 700;
 
-      &:hover {
-        color: ${props => props.theme.colors['sky-500']};
-      }
+    svg {
+      color: ${props => props.theme.colors['sky-500']};
+      font-size: ${props => props.theme.fontSize['xl']};
+    }
 
-      @media (min-width: ${device['desktop']}) {
-        font-size: ${props => props.theme.fontSize['base']};
-      }
+    &:hover {
+      color: ${props => props.theme.colors['sky-500']};
+    }
+
+    @media (min-width: ${device['desktop']}) {
+      font-size: ${props => props.theme.fontSize['base']};
     }
 
     &:hover {
@@ -203,15 +202,13 @@ export const DropdownMenuContent = styled(DropdownMenu.Content)`
     }
 
     &:last-child {
-      a {
-        transition: all 0.2s ease-in-out;
-        &:hover {
-          transform: scale(0.9);
-          color: ${props => props.theme.colors['red-500']};
-        }
-        svg {
-          color: ${props => props.theme.colors['red-500']};
-        }
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        transform: scale(0.9);
+        color: ${props => props.theme.colors['red-500']};
+      }
+      svg {
+        color: ${props => props.theme.colors['red-500']};
       }
     }
   }

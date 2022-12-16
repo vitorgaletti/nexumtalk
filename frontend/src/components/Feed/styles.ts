@@ -7,6 +7,7 @@ export const FeedContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  align-items: center;
 `;
 
 export const NewPost = styled.div`
@@ -20,7 +21,12 @@ export const NewPost = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: white;
 
+  @media (min-width: ${device['tablet']}) {
+    max-width: 28.75rem;
+  }
+
   @media (min-width: ${device['desktop']}) {
+    max-width: initial;
     padding: 1rem 2.5rem;
   }
 

@@ -1,5 +1,5 @@
 import { ProfileLanguages } from '../../../../components/ProfileLanguages';
-import { AboutContainer, AboutProfile } from './styles';
+import { AboutContainer, AboutProfile, AboutProfileLanguages } from './styles';
 export function About() {
   return (
     <AboutContainer>
@@ -11,22 +11,22 @@ export function About() {
           quasi at quibusdam?
         </p>
 
-        <span className="about-profile__looking-for">
+        <span className="about-profile__item">
           Looking for:
           <p>Friends, Meeting in person, Language pratice</p>
         </span>
 
-        <span className="about-profile__education">
+        <span className="about-profile__item">
           Education:
           <p>Some college</p>
         </span>
 
-        <span className="about-profile__occupation">
+        <span className="about-profile__item">
           Occupation:
           <p>Developer</p>
         </span>
 
-        <span className="about-profile__relationship-status">
+        <span className="about-profile__item">
           Relationship status:
           <p>In Relationship</p>
         </span>
@@ -38,10 +38,12 @@ export function About() {
 
       <hr />
 
-      <ProfileLanguages title="Speaks" />
+      <AboutProfileLanguages>
+        <ProfileLanguages title="Speaks" />
 
-      <hr />
-      <ProfileLanguages title="Learning" />
+        <hr />
+        <ProfileLanguages title="Learning" />
+      </AboutProfileLanguages>
     </AboutContainer>
   );
 }

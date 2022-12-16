@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const ProfileLanguagesContainer = styled.div`
-  width: 100%;
   padding: 0 1rem;
   display: flex;
   flex-direction: column;

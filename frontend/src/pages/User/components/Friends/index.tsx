@@ -2,99 +2,102 @@ import { MdSearch } from 'react-icons/md';
 import avatarImg from '../../../../assets/img/avatar.jpg';
 
 import {
-  FriendProfileCountry,
-  FriendProfileItem,
-  FriendProfileItemAvatar,
-  FriendProfileItemContent,
   FriendsContainer,
-  FriendSearch
+  FriendsProfileCountry,
+  FriendsProfileItem,
+  FriendsProfileItemAvatar,
+  FriendsProfileItemContent,
+  FriendsProfiles,
+  FriendsSearch
 } from './styles';
 export function Friends() {
   const isOnline = true;
 
   return (
     <FriendsContainer>
-      <FriendSearch>
+      <FriendsSearch>
         <div className="friend-search__field">
           <button>
             <MdSearch size={24} />
           </button>
           <input type="search" placeholder="Search your friends list" />
         </div>
-        <hr />
-      </FriendSearch>
+        <hr className="friends-search--separator" />
+      </FriendsSearch>
 
-      <FriendProfileItem>
-        <FriendProfileItemAvatar isOnline={isOnline}>
-          <img src={avatarImg} alt="Avatar profile" />
-        </FriendProfileItemAvatar>
+      <FriendsProfiles>
+        <FriendsProfileItem>
+          <FriendsProfileItemAvatar isOnline={isOnline}>
+            <img src={avatarImg} alt="Avatar profile" />
+          </FriendsProfileItemAvatar>
 
-        <FriendProfileItemContent>
-          <p>
-            Vitor{' '}
-            <span className="friend-profile-item-content--separator">|</span>{' '}
-            <span className="friend-profile-item-content__nickname">
-              vitor97, 25 y.o.
-            </span>
-          </p>
-          <FriendProfileCountry>
-            <span>Rio de Janeiro, Brazil</span>
-            <img
-              src="https://www.countryflagicons.com/FLAT/24/BR.png"
-              alt="Brazil"
-            />
-          </FriendProfileCountry>
-        </FriendProfileItemContent>
-      </FriendProfileItem>
-      <hr />
+          <FriendsProfileItemContent>
+            <p>
+              Vitor{' '}
+              <span className="friend-profile-item-content--separator">|</span>{' '}
+              <span className="friend-profile-item-content__nickname">
+                vitor97, 25 y.o.
+              </span>
+            </p>
+            <FriendsProfileCountry>
+              <span>Rio de Janeiro, Brazil</span>
+              <img
+                src="https://www.countryflagicons.com/FLAT/24/BR.png"
+                alt="Brazil"
+              />
+            </FriendsProfileCountry>
+          </FriendsProfileItemContent>
+        </FriendsProfileItem>
+        <hr className="friends-profiles--separator" />
 
-      <FriendProfileItem>
-        <FriendProfileItemAvatar isOnline={false}>
-          <img src={avatarImg} alt="Avatar profile" />
-        </FriendProfileItemAvatar>
+        <FriendsProfileItem>
+          <FriendsProfileItemAvatar isOnline={isOnline}>
+            <img src={avatarImg} alt="Avatar profile" />
+          </FriendsProfileItemAvatar>
 
-        <FriendProfileItemContent>
-          <p>
-            Vitor{' '}
-            <span className="friend-profile-item-content--separator">|</span>{' '}
-            <span className="friend-profile-item-content__nickname">
-              vitor97, 25 y.o.
-            </span>
-          </p>
-          <FriendProfileCountry>
-            <span>Rio de Janeiro, Brazil</span>
-            <img
-              src="https://www.countryflagicons.com/FLAT/24/BR.png"
-              alt="Brazil"
-            />
-          </FriendProfileCountry>
-        </FriendProfileItemContent>
-      </FriendProfileItem>
-      <hr />
+          <FriendsProfileItemContent>
+            <p>
+              Vitor{' '}
+              <span className="friend-profile-item-content--separator">|</span>{' '}
+              <span className="friend-profile-item-content__nickname">
+                vitor97, 25 y.o.
+              </span>
+            </p>
+            <FriendsProfileCountry>
+              <span>Rio de Janeiro, Brazil</span>
+              <img
+                src="https://www.countryflagicons.com/FLAT/24/BR.png"
+                alt="Brazil"
+              />
+            </FriendsProfileCountry>
+          </FriendsProfileItemContent>
+        </FriendsProfileItem>
+        <hr className="friends-profiles--separator" />
 
-      <FriendProfileItem>
-        <FriendProfileItemAvatar isOnline={isOnline}>
-          <img src={avatarImg} alt="Avatar profile" />
-        </FriendProfileItemAvatar>
+        <FriendsProfileItem>
+          <FriendsProfileItemAvatar isOnline={isOnline}>
+            <img src={avatarImg} alt="Avatar profile" />
+          </FriendsProfileItemAvatar>
 
-        <FriendProfileItemContent>
-          <p>
-            Vitor{' '}
-            <span className="friend-profile-item-content--separator">|</span>{' '}
-            <span className="friend-profile-item-content__nickname">
-              vitor97, 25 y.o.
-            </span>
-          </p>
-          <FriendProfileCountry>
-            <span>Rio de Janeiro, Brazil</span>
-            <img
-              src="https://www.countryflagicons.com/FLAT/24/BR.png"
-              alt="Brazil"
-            />
-          </FriendProfileCountry>
-        </FriendProfileItemContent>
-      </FriendProfileItem>
-      <hr />
+          <FriendsProfileItemContent>
+            <p>
+              Vitor{' '}
+              <span className="friend-profile-item-content--separator">|</span>{' '}
+              <span className="friend-profile-item-content__nickname">
+                vitor97, 25 y.o.
+              </span>
+            </p>
+            <FriendsProfileCountry>
+              <span>Rio de Janeiro, Brazil</span>
+              <img
+                src="https://www.countryflagicons.com/FLAT/24/BR.png"
+                alt="Brazil"
+              />
+            </FriendsProfileCountry>
+          </FriendsProfileItemContent>
+        </FriendsProfileItem>
+        <hr className="friends-profiles--separator" />
+      </FriendsProfiles>
     </FriendsContainer>
   );
 }

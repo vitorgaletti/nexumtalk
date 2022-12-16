@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../../../styles/themes/default';
 
 export const AboutContainer = styled.div`
   width: 100%;
@@ -10,6 +11,10 @@ export const AboutContainer = styled.div`
   border: 1px solid ${props => props.theme.colors['gray-300']};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
+
+  @media (min-width: ${device['tablet']}) {
+    padding: 2rem;
+  }
 `;
 
 export const AboutProfile = styled.div`
@@ -19,10 +24,18 @@ export const AboutProfile = styled.div`
   gap: 1.5rem;
   word-break: break-word;
 
+  @media (min-width: ${device['tablet']}) {
+    align-items: flex-start;
+  }
+
   .about-profile__quotes {
     font-size: ${props => props.theme.fontSize['sm']};
     color: ${props => props.theme.colors['zinc-600']};
     font-weight: 700;
+
+    @media (min-width: ${device['tablet']}) {
+      font-size: ${props => props.theme.fontSize['base']};
+    }
 
     &::before {
       content: '"';
@@ -33,51 +46,23 @@ export const AboutProfile = styled.div`
     }
   }
 
-  .about-profile__looking-for {
+  .about-profile__item {
     font-size: ${props => props.theme.fontSize['sm']};
     font-weight: 700;
     color: ${props => props.theme.colors['sky-500']};
 
-    p {
-      font-size: ${props => props.theme.fontSize['sm']};
-      font-weight: 400;
-      color: ${props => props.theme.colors['zinc-600']};
+    @media (min-width: ${device['tablet']}) {
+      font-size: ${props => props.theme.fontSize['base']};
     }
-  }
-
-  .about-profile__education {
-    font-size: ${props => props.theme.fontSize['sm']};
-    font-weight: 700;
-    color: ${props => props.theme.colors['sky-500']};
 
     p {
       font-size: ${props => props.theme.fontSize['sm']};
       font-weight: 400;
       color: ${props => props.theme.colors['zinc-600']};
-    }
-  }
 
-  .about-profile__occupation {
-    font-size: ${props => props.theme.fontSize['sm']};
-    font-weight: 700;
-    color: ${props => props.theme.colors['sky-500']};
-
-    p {
-      font-size: ${props => props.theme.fontSize['sm']};
-      font-weight: 400;
-      color: ${props => props.theme.colors['zinc-600']};
-    }
-  }
-
-  .about-profile__relationship-status {
-    font-size: ${props => props.theme.fontSize['sm']};
-    font-weight: 700;
-    color: ${props => props.theme.colors['sky-500']};
-
-    p {
-      font-size: ${props => props.theme.fontSize['sm']};
-      font-weight: 400;
-      color: ${props => props.theme.colors['zinc-600']};
+      @media (min-width: ${device['tablet']}) {
+        font-size: ${props => props.theme.fontSize['base']};
+      }
     }
   }
 
@@ -85,5 +70,25 @@ export const AboutProfile = styled.div`
     font-size: ${props => props.theme.fontSize['xs']};
     color: ${props => props.theme.colors['zinc-600']};
     text-align: center;
+
+    @media (min-width: ${device['tablet']}) {
+      font-size: ${props => props.theme.fontSize['sm']};
+    }
+  }
+`;
+
+export const AboutProfileLanguages = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: ${device['tablet']}) {
+    flex-direction: row;
+    justify-content: space-between;
+
+    hr {
+      display: none;
+    }
   }
 `;

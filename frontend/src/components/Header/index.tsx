@@ -63,26 +63,26 @@ export function Header() {
           <DropdownMenu.Portal>
             <DropdownMenuContent>
               <DropdownMenu.Arrow className="DropdownMenuArrow" />
-              <DropdownMenu.Item className="DropwdowMenuItem">
+              <DropdownMenu.Item className="DropwdowMenuItem" asChild>
                 <NavLink to={`${nickname}`}>
                   <BsPersonSquare />
                   My profile
                 </NavLink>
               </DropdownMenu.Item>
-              <DropdownMenu.Item className="DropwdowMenuItem">
+              <DropdownMenu.Item className="DropwdowMenuItem" asChild>
                 <NavLink to={`${nickname}/editprofile`}>
                   <FiEdit />
                   Edit Profile
                 </NavLink>
               </DropdownMenu.Item>
-              <DropdownMenu.Item className="DropwdowMenuItem">
+              <DropdownMenu.Item className="DropwdowMenuItem" asChild>
                 <NavLink to={`${nickname}/settings`}>
                   <FiSettings />
                   Settings
                 </NavLink>
               </DropdownMenu.Item>
               <DropdownMenu.Separator className="DropdownMenuSeparator" />
-              <DropdownMenu.Item className="DropwdowMenuItem">
+              <DropdownMenu.Item className="DropwdowMenuItem" asChild>
                 <NavLink to="/logout">
                   <RiLogoutBoxLine />
                   Logout

@@ -7,6 +7,7 @@ interface PostProps {
 }
 
 export const PostContainer = styled.div`
+  max-width: 42.5rem;
   width: 100%;
   background-color: white;
   border: 1px solid ${props => props.theme.colors['gray-300']};
@@ -40,7 +41,6 @@ export const PostTitle = styled.p<PostProps>`
 
 export const PostImage = styled.img<PostProps>`
   display: ${props => (props.image ? 'block' : 'none')};
-  max-width: 46rem;
   max-height: 25rem;
   width: 100%;
   height: 100%;
