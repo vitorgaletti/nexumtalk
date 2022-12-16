@@ -3,10 +3,12 @@ import { FaUserFriends } from 'react-icons/fa';
 import { GrView } from 'react-icons/gr';
 import { MdHome, MdPhotoSizeSelectActual, MdSearch } from 'react-icons/md';
 import { RiMessage2Line } from 'react-icons/ri';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 import { NavbarContainer } from './styles';
 
 export function Navbar() {
+  const { nickname } = useParams();
+
   return (
     <NavbarContainer>
       <ul>
@@ -18,42 +20,42 @@ export function Navbar() {
         </li>
 
         <li>
-          <NavLink to="/myprofile" title="My Profile">
+          <NavLink to={`/${nickname}`} title="My Profile">
             <BsPersonSquare />
             <span>My Profile</span>
           </NavLink>
         </li>
 
         <li>
-          <NavLink to="/myprofile/photos">
+          <NavLink to={`/${nickname}/photos`}>
             <MdPhotoSizeSelectActual />
             <span>Photos</span>
           </NavLink>
         </li>
 
         <li>
-          <NavLink to="/myprofile/photos">
+          <NavLink to={`/${nickname}/messages`}>
             <RiMessage2Line />
             <span>Messages</span>
           </NavLink>
         </li>
 
         <li>
-          <NavLink to="/myprofile/messages">
+          <NavLink to={`/${nickname}/friends`}>
             <FaUserFriends />
             <span>Friends</span>
           </NavLink>
         </li>
 
         <li>
-          <NavLink to="/search">
+          <NavLink to={`/${nickname}/search`}>
             <MdSearch />
             <span>Search</span>
           </NavLink>
         </li>
 
         <li>
-          <NavLink to="/myprofile/lastvisitors">
+          <NavLink to={`/${nickname}/lastvisitors`}>
             <GrView className="last-visitors--icon" />
             <span>Last Visitors</span>
           </NavLink>

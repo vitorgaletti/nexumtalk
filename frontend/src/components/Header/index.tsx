@@ -1,14 +1,12 @@
 import * as Dialog from '@radix-ui/react-dialog';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
+import { BsPersonSquare } from 'react-icons/bs';
 import { FiEdit, FiSettings } from 'react-icons/fi';
+import { HiOutlineMenu } from 'react-icons/hi';
 import { MdNotificationsActive } from 'react-icons/md';
 import { RiArrowDownSLine, RiLogoutBoxLine } from 'react-icons/ri';
+import { NavLink, useParams } from 'react-router-dom';
 import avatarImg from '../../assets/img/avatar.jpg';
-import logoImg from '/logo.svg';
-
-import { BsPersonSquare } from 'react-icons/bs';
-import { HiOutlineMenu } from 'react-icons/hi';
-import { NavLink } from 'react-router-dom';
 import { Navbar } from '../Navbar';
 import { NavbarMobile } from '../NavbarMobile';
 import {
@@ -17,12 +15,14 @@ import {
   DropdownMenuContent,
   LogoContent
 } from './styles';
+import logoImg from '/logo.svg';
 
 export function Header() {
+  const { nickname } = useParams();
   return (
     <ContainerHeader>
       <LogoContent>
-        <Dialog.Root>
+        <Dialog.Root modal>
           <Dialog.Trigger asChild>
             <button>
               <HiOutlineMenu
@@ -64,19 +64,19 @@ export function Header() {
             <DropdownMenuContent>
               <DropdownMenu.Arrow className="DropdownMenuArrow" />
               <DropdownMenu.Item className="DropwdowMenuItem">
-                <NavLink to="/myprofile">
+                <NavLink to={`${nickname}`}>
                   <BsPersonSquare />
                   My profile
                 </NavLink>
               </DropdownMenu.Item>
               <DropdownMenu.Item className="DropwdowMenuItem">
-                <NavLink to="/myprofile/editprofile">
+                <NavLink to={`${nickname}/editprofile`}>
                   <FiEdit />
                   Edit Profile
                 </NavLink>
               </DropdownMenu.Item>
               <DropdownMenu.Item className="DropwdowMenuItem">
-                <NavLink to="/settings">
+                <NavLink to={`${nickname}/settings`}>
                   <FiSettings />
                   Settings
                 </NavLink>
