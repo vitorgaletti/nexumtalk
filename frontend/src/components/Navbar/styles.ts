@@ -1,6 +1,11 @@
+/* eslint-disable indent */
 import styled from 'styled-components';
 
-export const NavbarContainer = styled.nav`
+interface NavbarContainerProps {
+  hasSubPagesMyProfile: boolean;
+}
+
+export const NavbarContainer = styled.nav<NavbarContainerProps>`
   width: 100%;
   margin-top: 0;
 
@@ -36,7 +41,18 @@ export const NavbarContainer = styled.nav`
       }
 
       &.active {
-        color: ${props => props.theme.colors['white']};
+        svg {
+          color: ${props => props.theme.colors['white']};
+        }
+      }
+
+      &.activeLinkMyProfile.active {
+        svg {
+          color: ${props =>
+            props.hasSubPagesMyProfile
+              ? props.theme.colors['white']
+              : props.theme.colors['gray-300']};
+        }
       }
 
       .last-visitors--icon path {

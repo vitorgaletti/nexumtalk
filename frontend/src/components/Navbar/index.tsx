@@ -4,13 +4,16 @@ import { GrView } from 'react-icons/gr';
 import { MdHome, MdPhotoSizeSelectActual, MdSearch } from 'react-icons/md';
 import { RiMessage2Line } from 'react-icons/ri';
 import { NavLink, useParams } from 'react-router-dom';
+import { useHasSubPages } from '../../hooks/useHasSubPages';
 import { NavbarContainer } from './styles';
 
 export function Navbar() {
   const { nickname } = useParams();
 
+  const { hasSubPagesMyProfile } = useHasSubPages();
+
   return (
-    <NavbarContainer>
+    <NavbarContainer hasSubPagesMyProfile={hasSubPagesMyProfile()}>
       <ul>
         <li>
           <NavLink to="/" title="Home">
@@ -20,7 +23,11 @@ export function Navbar() {
         </li>
 
         <li>
-          <NavLink to={`/${nickname}`} title="My Profile">
+          <NavLink
+            to={`/${nickname}`}
+            title="My Profile"
+            className="activeLinkMyProfile"
+          >
             <BsPersonSquare />
             <span>My Profile</span>
           </NavLink>

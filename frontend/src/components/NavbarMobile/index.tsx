@@ -4,31 +4,15 @@ import { FaUserFriends } from 'react-icons/fa';
 import { GrView } from 'react-icons/gr';
 import { MdHome, MdPhotoSizeSelectActual, MdSearch } from 'react-icons/md';
 import { RiMessage2Line } from 'react-icons/ri';
-import { NavLink, useLocation, useParams } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
+import { useHasSubPages } from '../../hooks/useHasSubPages';
 import { NavbarMobileContainer, NavbarMobileContent } from './styles';
 import logoImg from '/logo.svg';
 
 export function NavbarMobile() {
   const { nickname } = useParams();
-  const { pathname } = useLocation();
 
-  function hasSubPagesHome(): boolean {
-    const hasSubPagesHome = pathname.includes(`/${nickname}`);
-    return hasSubPagesHome;
-  }
-
-  function hasSubPagesMyProfile(): boolean {
-    const allowSubPagesMyProfile =
-      pathname.includes(`/${nickname}`) ||
-      pathname.includes(`${nickname}/about`) ||
-      pathname.includes(`${nickname}/information`);
-
-    const deniedPagesMyProfile =
-      pathname.includes(`/${nickname}/photos`) ||
-      pathname.includes(`/${nickname}/friends`);
-
-    return allowSubPagesMyProfile && !deniedPagesMyProfile;
-  }
+  const { hasSubPagesHome, hasSubPagesMyProfile } = useHasSubPages();
 
   return (
     <NavbarMobileContainer>
