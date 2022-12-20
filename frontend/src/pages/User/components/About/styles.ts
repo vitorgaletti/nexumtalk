@@ -3,7 +3,7 @@ import { device } from '../../../../styles/themes/default';
 
 export const AboutContainer = styled.div`
   width: 100%;
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   padding: 2rem 1rem;
@@ -81,7 +81,6 @@ export const AboutProfileLanguages = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
 
   @media (min-width: ${device['tablet']}) {
     flex-direction: row;

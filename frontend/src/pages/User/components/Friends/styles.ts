@@ -7,7 +7,7 @@ interface FriendProfileItemAvatarProps {
 
 export const FriendsContainer = styled.div`
   width: 100%;
-  height: 100%;
+  height: auto;
   padding: 1rem 0.75rem;
   background-color: ${props => props.theme.colors['white']};
   border: 1px solid ${props => props.theme.colors['gray-300']};

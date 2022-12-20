@@ -3,7 +3,7 @@ import { device } from '../../../../styles/themes/default';
 
 export const InformationContainer = styled.div`
   width: 100%;
-  height: 100%;
+  height: auto;
   padding: 1rem;
   display: flex;
   flex-direction: column;

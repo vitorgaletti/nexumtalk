@@ -53,6 +53,11 @@ export const PhotosGallery = styled.div`
     gap: 1rem;
   }
 
+  @media (min-width: ${device['desktop']}) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
   img {
     width: 100%;
     height: auto;

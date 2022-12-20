@@ -10,6 +10,18 @@ export const UserContainer = styled.div`
   width: 100%;
   height: 100%;
 
+  @media (min-width: ${device['desktop']}) {
+    display: grid;
+    grid-template-columns: auto minmax(auto, 50rem) minmax(auto, 295px);
+    gap: 1rem;
+    justify-content: space-between;
+  }
+`;
+
+export const UserContent = styled.div`
+  width: 100%;
+  height: 100%;
+
   hr {
     width: 100%;
     border: 1px solid ${props => props.theme.colors['gray-300']};
@@ -19,7 +31,10 @@ export const UserContainer = styled.div`
 
 export const UserContainerTop = styled.div`
   width: 100%;
-  height: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 
   .user-container-top__banner {
     width: 100%;
@@ -35,7 +50,6 @@ export const UserContainerTop = styled.div`
 `;
 
 export const UserCard = styled.div`
-  margin-top: 1rem;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -173,6 +187,10 @@ export const UserCardProfileButton = styled.button`
   @media (min-width: ${device['tablet']}) {
     flex: none;
     padding: 0.75rem 1.5rem;
+  }
+
+  @media (min-width: ${device['desktop']}) {
+    font-size: ${props => props.theme.fontSize['base']};
   }
 
   svg {

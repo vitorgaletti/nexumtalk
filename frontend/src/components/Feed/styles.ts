@@ -3,7 +3,7 @@ import { device } from '../../styles/themes/default';
 
 export const FeedContainer = styled.div`
   width: 100%;
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -26,7 +26,7 @@ export const NewPost = styled.div`
   }
 
   @media (min-width: ${device['desktop']}) {
-    max-width: initial;
+    max-width: 42.5rem;
     padding: 1rem 2.5rem;
   }
 
