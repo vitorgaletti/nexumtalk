@@ -21,7 +21,7 @@ export const FriendRequestContainer = styled.div<FriendRequestProps>`
     display: none;
   }
 
-  @media (min-width: ${device['desktop']}) {
+  @media (min-width: ${device['tablet']}) {
     display: ${props => (props.haveFriendRequest ? 'flex' : 'none')};
   }
 `;

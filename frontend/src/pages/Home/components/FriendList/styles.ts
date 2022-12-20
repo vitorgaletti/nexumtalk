@@ -9,7 +9,7 @@ export const FriendListContainer = styled.div`
   max-height: 85vh;
   height: min-content;
 
-  padding: 2rem;
+  padding: 2rem 1rem;
   flex-direction: column;
   gap: 1.5rem;
 
@@ -24,7 +24,7 @@ export const FriendListContainer = styled.div`
     display: none;
   }
 
-  @media (min-width: ${device['desktop']}) {
+  @media (min-width: ${device['tablet']}) {
     display: flex;
   }
 `;
@@ -131,10 +131,12 @@ export const FriendListItem = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
 
   .friend-list-content-item__icon-message {
     color: ${props => props.theme.colors['sky-500']};
+    margin-right: 0.75rem;
   }
 `;
 

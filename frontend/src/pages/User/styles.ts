@@ -16,6 +16,13 @@ export const UserContainer = styled.div`
     gap: 1rem;
     justify-content: space-between;
   }
+
+  .user-container--show-friend-list {
+    display: none;
+    @media (min-width: ${device['desktop']}) {
+      display: flex;
+    }
+  }
 `;
 
 export const UserContent = styled.div`

@@ -55,9 +55,6 @@ export function Profile() {
             />
           </div>
 
-          <span className="information-profile__join-date">
-            Joined 10 years ago, profile updated 10 years ago
-          </span>
           <LocationProfile>
             <span>Rio de Janeiro, Brazil</span>
             <img
@@ -65,6 +62,10 @@ export function Profile() {
               alt="Brazil"
             />
           </LocationProfile>
+
+          <span className="information-profile__join-date">
+            Joined 10 years ago, profile updated 10 years ago
+          </span>
         </InformationProfile>
 
         <hr />
@@ -82,11 +83,13 @@ export function Profile() {
 
         <hr />
 
-        <ProfileLanguages title="Speaks" />
+        <div className="profile-content__profile-languages">
+          <ProfileLanguages title="Speaks" />
 
-        <hr />
+          <hr />
 
-        <ProfileLanguages title="Learning" />
+          <ProfileLanguages title="Learning" />
+        </div>
       </ProfileContent>
     </ProfileContainer>
   );

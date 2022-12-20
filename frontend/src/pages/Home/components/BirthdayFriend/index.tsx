@@ -1,5 +1,3 @@
-import { AiOutlineMessage } from 'react-icons/ai';
-
 import avatarImg from '../../../../assets/img/avatar.jpg';
 
 import {
@@ -36,10 +34,6 @@ export function BirthdayFriend() {
             </BirthdayFriendCountry>
           </BirthdayFriendProfileContent>
         </BirthdayFriendProfile>
-        <AiOutlineMessage
-          size={24}
-          className="birthday-friend-content--icon-message"
-        />
       </BirthdayFriendItem>
     </BirthdayFriendContainer>
   );

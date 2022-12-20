@@ -11,7 +11,7 @@ export const ProfileContainer = styled.div`
   display: none;
   padding-bottom: 2rem;
 
-  @media (min-width: ${device['tablet']}) {
+  @media (min-width: ${device['desktop']}) {
     display: block;
   }
 `;
@@ -70,6 +70,14 @@ export const ProfileContent = styled.div`
     width: fill-available;
     border: 1px solid ${props => props.theme.colors['gray-300']};
     margin: 0 1rem;
+  }
+
+  .profile-content__profile-languages {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
   }
 `;
 

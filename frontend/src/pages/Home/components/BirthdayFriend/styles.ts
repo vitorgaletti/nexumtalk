@@ -20,7 +20,7 @@ export const BirthdayFriendContainer = styled.div<BirthdayFriendProps>`
     display: none;
   }
 
-  @media (min-width: ${device['desktop']}) {
+  @media (min-width: ${device['tablet']}) {
     display: ${props => (props.anyBirthdays ? 'flex' : 'none')};
   }
 `;
@@ -53,10 +53,6 @@ export const BirthdayFriendItem = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  .birthday-friend-content--icon-message {
-    color: ${props => props.theme.colors['sky-500']};
-  }
 `;
 
 export const BirthdayFriendProfile = styled.div`

@@ -34,35 +34,35 @@ export function Navbar() {
         </li>
 
         <li>
-          <NavLink to={`/${nickname}/photos`}>
+          <NavLink to={`/${nickname}/photos`} title="Photos">
             <MdPhotoSizeSelectActual />
             <span>Photos</span>
           </NavLink>
         </li>
 
         <li>
-          <NavLink to={`/${nickname}/messages`}>
+          <NavLink to={`/${nickname}/messages`} title="Messages">
             <RiMessage2Line />
             <span>Messages</span>
           </NavLink>
         </li>
 
         <li>
-          <NavLink to={`/${nickname}/friends`}>
+          <NavLink to={`/${nickname}/friends`} title="Friends">
             <FaUserFriends />
             <span>Friends</span>
           </NavLink>
         </li>
 
         <li>
-          <NavLink to={`/${nickname}/search`}>
+          <NavLink to={`/${nickname}/search`} title="Search">
             <MdSearch />
             <span>Search</span>
           </NavLink>
         </li>
 
         <li>
-          <NavLink to={`/${nickname}/lastvisitors`}>
+          <NavLink to={`/${nickname}/lastvisitors`} title="Last Visitors">
             <GrView className="last-visitors--icon" />
             <span>Last Visitors</span>
           </NavLink>

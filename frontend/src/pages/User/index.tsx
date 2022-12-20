@@ -109,7 +109,9 @@ export function User() {
         {pathname.includes('friends') && <Friends />}
       </UserContent>
 
-      <FriendList />
+      <div className="user-container--show-friend-list">
+        <FriendList />
+      </div>
     </UserContainer>
   );
 }
