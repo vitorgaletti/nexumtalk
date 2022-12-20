@@ -117,7 +117,7 @@ export const InformationProfile = styled.div`
 export const StatusProfile = styled.div`
   display: flex;
   gap: 0.5rem;
-  align-items: center;
+  align-items: baseline;
 
   span {
     width: 0.75rem;
@@ -130,6 +130,7 @@ export const StatusProfile = styled.div`
     font-size: ${props => props.theme.fontSize['base']};
     font-weight: 700;
     color: ${props => props.theme.colors['zinc-800']};
+    word-break: break-word;
   }
 `;
 

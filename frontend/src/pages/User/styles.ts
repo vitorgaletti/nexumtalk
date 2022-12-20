@@ -94,8 +94,8 @@ export const UserCardProfile = styled.div`
 
   .user-card-profile__details {
     display: flex;
-    gap: 0.5rem;
-    align-items: center;
+    align-items: flex-start;
+    max-width: 250px;
 
     img {
       max-width: 1.5rem;
@@ -108,6 +108,8 @@ export const UserCardProfile = styled.div`
     font-size: ${props => props.theme.fontSize['sm']};
     color: ${props => props.theme.colors['sky-500']};
     font-weight: 700;
+    word-break: break-word;
+    text-align: center;
 
     @media (min-width: ${device['tablet']}) {
       font-size: ${props => props.theme.fontSize['base']};
@@ -117,7 +119,7 @@ export const UserCardProfile = styled.div`
       color: ${props => props.theme.colors['gray-300']};
     }
 
-    .user-card__name {
+    .user-card__nickname {
       font-size: ${props => props.theme.fontSize['xs']};
       color: ${props => props.theme.colors['zinc-600']};
       font-weight: 400;

@@ -50,10 +50,11 @@ export function User() {
               </UserStatus>
 
               <div className="user-card-profile__details">
+                {/* prettier-ignore */}
                 <h4>
-                  Vitor <span>|</span>{' '}
-                  <span className="user-card__name"> vitor97, 25 y.o.</span>
-                </h4>
+                  Vitor Augusto Galeti Francisco {' '}<span>|</span>{' '}
+                  <span className="user-card__nickname"> vitor97, 25 y.o.</span>
+                </h4>{' '}
                 <img
                   src={`${
                     genderProfile === 'male'
