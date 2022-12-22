@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { DefaultLayout } from '../layouts/DefaultLayout';
 import { Home } from '../pages/Home';
+import { SignUp } from '../pages/SignUp';
 import { User } from '../pages/User';
 
 function ScrollToTop() {
@@ -29,6 +30,7 @@ export function Router() {
           <Route path="/:nickname/photos" element={<User />} />
           <Route path="/:nickname/friends" element={<User />} />
         </Route>
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
     </>
   );

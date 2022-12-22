@@ -6,6 +6,7 @@ export const defaultTheme = {
     overlay: 'rgba(0,0,0,0.7)',
 
     'gray-300': '#D1D5DB',
+    'gray-400': '#9CA3AF',
 
     'zinc-100': ' #F4F4F5',
     'zinc-600': '#52525B',
