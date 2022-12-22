@@ -1,6 +1,7 @@
 /* eslint-disable indent */
-// import 'flatpickr/dist/flatpickr.css';
-// import 'flatpickr/dist/themes/material_blue.css';
+import 'flatpickr/dist/flatpickr.css';
+import 'flatpickr/dist/themes/material_blue.css';
+
 import styled from 'styled-components';
 
 export const PersonalInfoContainer = styled.div`
